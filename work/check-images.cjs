@@ -1,0 +1,1 @@
+const fs=require('fs');const {downloads}=require('./catalog.json');const invalid=downloads.filter(x=>fs.readFileSync(x.file).subarray(0,8).toString('hex')!=='89504e470d0a1a0a');console.log('PNG checked:',downloads.length,'Invalid:',invalid.length);if(invalid.length)process.exit(1);

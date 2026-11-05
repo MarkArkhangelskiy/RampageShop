@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rampage shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Rampage shop</a>
+        </div>
+        <form class="search" role="search">
+            <label for="search-input">Search by name</label>
+            <input type="search" id="search-input" placeholder="For example, Blink Dagger">
+            <label for="category-filter">Category</label>
+            <select id="category-filter">
+                <option value="all">All items</option>
+                <optgroup label="Basic Items">
+                    <option value="basic-items">All Basic Items</option>
+                    <option value="consumables">Consumables</option>
+                    <option value="attributes">Attributes</option>
+                    <option value="equipment">Equipment</option>
+                    <option value="miscellaneous">Miscellaneous</option>
+                    <option value="secret">Secret Shop</option>
+                </optgroup>
+                <optgroup label="Upgraded Items">
+                    <option value="upgraded-items">All Upgraded Items</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="support">Support</option>
+                    <option value="magical">Magical</option>
+                    <option value="armor">Armor</option>
+                    <option value="weapons">Weapons</option>
+                    <option value="artifacts">Artifacts</option>
+                </optgroup>
+                <optgroup label="Neutral Items">
+                    <option value="neutral-items">All Neutral Items</option>
+                    <option value="tier-1">Tier 1</option>
+                    <option value="tier-2">Tier 2</option>
+                    <option value="tier-3">Tier 3</option>
+                    <option value="tier-4">Tier 4</option>
+                    <option value="tier-5">Tier 5</option>
+                </optgroup>
+                <optgroup label="Other Items">
+                    <option value="other-items">All Other Items</option>
+                    <option value="boss-rewards">Boss Rewards</option>
+                    <option value="collectibles">Collectibles</option>
+                </optgroup>
+            </select>
+            <label for="tag-filter">Tag</label>
+            <select id="tag-filter">
+                <option value="all">All tags</option>
+                <option value="damage">Damage</option>
+                <option value="armor">Armor</option>
+                <option value="attack_speed">Attack speed</option>
+                <option value="str">Strength</option>
+                <option value="agi">Agility</option>
+                <option value="int">Intelligence</option>
+                <option value="regen_health">Health regeneration</option>
+                <option value="regen_mana">Mana regeneration</option>
+                <option value="mobility">Mobility</option>
+                <option value="escape">Escape</option>
+            </select>
+            <button type="reset">Reset</button>
+        </form>
+        <nav>
+            <a href="profile.html">Profile</a>
+            <a href="orders.html">My orders</a>
+            <a href="create_order.html">Add order</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Dota 2 Items</h1>
+        <p id="results-count" role="status" aria-live="polite"></p>
+        <p id="no-results" hidden>No items found. Try another name or reset the filters.</p>
+        <section class="basic-items item-group">
+            <h2>Basic Items</h2>
+            <section class="consumables item-category">
+                <h3>Consumables</h3>
+                <div class="observer-ward item-card" data-name="Observer Ward" data-category="consumables" data-group="basic-items" data-tags="consumable laning">
+                    <img src="img/Observer_Ward_model.webp" alt="Observer Ward" width="120" height="90" loading="lazy">
+                    <h4>Observer Ward</h4>
+                    <p>0 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Observer_Ward" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="blood-grenade item-card" data-name="Blood Grenade" data-category="consumables" data-group="basic-items" data-tags="consumable laning">
+                    <img src="img/items/blood_grenade.png" alt="Blood Grenade" width="120" height="90" loading="lazy">
+                    <h4>Blood Grenade</h4>
+                    <p>50 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Blood_Grenade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="clarity item-card" data-name="Clarity" data-category="consumables" data-group="basic-items" data-tags="consumable laning">
+                    <img src="img/items/clarity.png" alt="Clarity" width="120" height="90" loading="lazy">
+                    <h4>Clarity</h4>
+                    <p>60 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Clarity" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="sentry-ward item-card" data-name="Sentry Ward" data-category="consumables" data-group="basic-items" data-tags="consumable see_invis laning">
+                    <img src="img/items/ward_sentry.png" alt="Sentry Ward" width="120" height="90" loading="lazy">
+                    <h4>Sentry Ward</h4>
+                    <p>50 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Sentry_Ward" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="smoke-of-deceit item-card" data-name="Smoke of Deceit" data-category="consumables" data-group="basic-items" data-tags="consumable teamfight">
+                    <img src="img/items/smoke_of_deceit.png" alt="Smoke of Deceit" width="120" height="90" loading="lazy">
+                    <h4>Smoke of Deceit</h4>
+                    <p>50 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Smoke_of_Deceit" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="enchanted-mango item-card" data-name="Enchanted Mango" data-category="consumables" data-group="basic-items" data-tags="consumable">
+                    <img src="img/items/enchanted_mango.png" alt="Enchanted Mango" width="120" height="90" loading="lazy">
+                    <h4>Enchanted Mango</h4>
+                    <p>65 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Enchanted_Mango" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="faerie-fire item-card" data-name="Faerie Fire" data-category="consumables" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/faerie_fire.png" alt="Faerie Fire" width="120" height="90" loading="lazy">
+                    <h4>Faerie Fire</h4>
+                    <p>65 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Faerie_Fire" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dust-of-appearance item-card" data-name="Dust of Appearance" data-category="consumables" data-group="basic-items" data-tags="consumable see_invis laning">
+                    <img src="img/items/dust.png" alt="Dust of Appearance" width="120" height="90" loading="lazy">
+                    <h4>Dust of Appearance</h4>
+                    <p>80 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dust_of_Appearance" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="tango item-card" data-name="Tango" data-category="consumables" data-group="basic-items" data-tags="consumable laning">
+                    <img src="img/items/tango.png" alt="Tango" width="120" height="90" loading="lazy">
+                    <h4>Tango</h4>
+                    <p>90 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Tango" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="healing-salve item-card" data-name="Healing Salve" data-category="consumables" data-group="basic-items" data-tags="consumable laning">
+                    <img src="img/items/flask.png" alt="Healing Salve" width="120" height="90" loading="lazy">
+                    <h4>Healing Salve</h4>
+                    <p>100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Healing_Salve" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="town-portal-scroll item-card" data-name="Town Portal Scroll" data-category="consumables" data-group="basic-items" data-tags="consumable laning tutorial">
+                    <img src="img/items/tpscroll.png" alt="Town Portal Scroll" width="120" height="90" loading="lazy">
+                    <h4>Town Portal Scroll</h4>
+                    <p>100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Town_Portal_Scroll" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="bottle item-card" data-name="Bottle" data-category="consumables" data-group="basic-items" data-tags="consumable laning">
+                    <img src="img/items/bottle.png" alt="Bottle" width="120" height="90" loading="lazy">
+                    <h4>Bottle</h4>
+                    <p>675 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Bottle" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aghanims-shard item-card" data-name="Aghanim's Shard" data-category="consumables" data-group="basic-items" data-tags="int str agi mana_pool health_pool hard_to_tag">
+                    <img src="img/items/aghanims_shard.png" alt="Aghanim's Shard" width="120" height="90" loading="lazy">
+                    <h4>Aghanim's Shard</h4>
+                    <p>1400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Aghanim's_Shard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="attributes item-category">
+                <h3>Attributes</h3>
+                <div class="iron-branch item-card" data-name="Iron Branch" data-category="attributes" data-group="basic-items" data-tags="agi int str">
+                    <img src="img/items/branches.png" alt="Iron Branch" width="120" height="90" loading="lazy">
+                    <h4>Iron Branch</h4>
+                    <p>55 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Iron_Branch" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="gauntlets-of-strength item-card" data-name="Gauntlets of Strength" data-category="attributes" data-group="basic-items" data-tags="str">
+                    <img src="img/items/gauntlets.png" alt="Gauntlets of Strength" width="120" height="90" loading="lazy">
+                    <h4>Gauntlets of Strength</h4>
+                    <p>140 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Gauntlets_of_Strength" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mantle-of-intelligence item-card" data-name="Mantle of Intelligence" data-category="attributes" data-group="basic-items" data-tags="int">
+                    <img src="img/items/mantle.png" alt="Mantle of Intelligence" width="120" height="90" loading="lazy">
+                    <h4>Mantle of Intelligence</h4>
+                    <p>140 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mantle_of_Intelligence" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="slippers-of-agility item-card" data-name="Slippers of Agility" data-category="attributes" data-group="basic-items" data-tags="agi">
+                    <img src="img/items/slippers.png" alt="Slippers of Agility" width="120" height="90" loading="lazy">
+                    <h4>Slippers of Agility</h4>
+                    <p>140 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Slippers_of_Agility" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="circlet item-card" data-name="Circlet" data-category="attributes" data-group="basic-items" data-tags="agi int str">
+                    <img src="img/items/circlet.png" alt="Circlet" width="120" height="90" loading="lazy">
+                    <h4>Circlet</h4>
+                    <p>155 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Circlet" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="band-of-elvenskin item-card" data-name="Band of Elvenskin" data-category="attributes" data-group="basic-items" data-tags="agi">
+                    <img src="img/items/boots_of_elves.png" alt="Band of Elvenskin" width="120" height="90" loading="lazy">
+                    <h4>Band of Elvenskin</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Band_of_Elvenskin" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="belt-of-strength item-card" data-name="Belt of Strength" data-category="attributes" data-group="basic-items" data-tags="str">
+                    <img src="img/items/belt_of_strength.png" alt="Belt of Strength" width="120" height="90" loading="lazy">
+                    <h4>Belt of Strength</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Belt_of_Strength" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="crown item-card" data-name="Crown" data-category="attributes" data-group="basic-items" data-tags="agi int str">
+                    <img src="img/items/crown.png" alt="Crown" width="120" height="90" loading="lazy">
+                    <h4>Crown</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Crown" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="robe-of-the-magi item-card" data-name="Robe of the Magi" data-category="attributes" data-group="basic-items" data-tags="int">
+                    <img src="img/items/robe.png" alt="Robe of the Magi" width="120" height="90" loading="lazy">
+                    <h4>Robe of the Magi</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Robe_of_the_Magi" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="blade-of-alacrity item-card" data-name="Blade of Alacrity" data-category="attributes" data-group="basic-items" data-tags="agi">
+                    <img src="img/items/blade_of_alacrity.png" alt="Blade of Alacrity" width="120" height="90" loading="lazy">
+                    <h4>Blade of Alacrity</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Blade_of_Alacrity" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="diadem item-card" data-name="Diadem" data-category="attributes" data-group="basic-items" data-tags="agi int str">
+                    <img src="img/items/diadem.png" alt="Diadem" width="120" height="90" loading="lazy">
+                    <h4>Diadem</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Diadem" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ogre-axe item-card" data-name="Ogre Axe" data-category="attributes" data-group="basic-items" data-tags="str">
+                    <img src="img/items/ogre_axe.png" alt="Ogre Axe" width="120" height="90" loading="lazy">
+                    <h4>Ogre Axe</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ogre_Axe" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="staff-of-wizardry item-card" data-name="Staff of Wizardry" data-category="attributes" data-group="basic-items" data-tags="int">
+                    <img src="img/items/staff_of_wizardry.png" alt="Staff of Wizardry" width="120" height="90" loading="lazy">
+                    <h4>Staff of Wizardry</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Staff_of_Wizardry" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="equipment item-category">
+                <h3>Equipment</h3>
+                <div class="quelling-blade item-card" data-name="Quelling Blade" data-category="equipment" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/quelling_blade.png" alt="Quelling Blade" width="120" height="90" loading="lazy">
+                    <h4>Quelling Blade</h4>
+                    <p>100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Quelling_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ring-of-protection item-card" data-name="Ring of Protection" data-category="equipment" data-group="basic-items" data-tags="armor">
+                    <img src="img/items/ring_of_protection.png" alt="Ring of Protection" width="120" height="90" loading="lazy">
+                    <h4>Ring of Protection</h4>
+                    <p>175 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ring_of_Protection" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="infused-raindrops item-card" data-name="Infused Raindrops" data-category="equipment" data-group="basic-items" data-tags="armor laning">
+                    <img src="img/items/infused_raindrop.png" alt="Infused Raindrops" width="120" height="90" loading="lazy">
+                    <h4>Infused Raindrops</h4>
+                    <p>225 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Infused_Raindrops" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="orb-of-venom item-card" data-name="Orb of Venom" data-category="equipment" data-group="basic-items" data-tags="hard_to_tag">
+                    <img src="img/items/orb_of_venom.png" alt="Orb of Venom" width="120" height="90" loading="lazy">
+                    <h4>Orb of Venom</h4>
+                    <p>350 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Orb_of_Venom" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="orb-of-blight item-card" data-name="Orb of Blight" data-category="equipment" data-group="basic-items" data-tags="hard_to_tag">
+                    <img src="img/items/blight_stone.png" alt="Orb of Blight" width="120" height="90" loading="lazy">
+                    <h4>Orb of Blight</h4>
+                    <p>300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Orb_of_Blight" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="orb-of-frost item-card" data-name="Orb of Frost" data-category="equipment" data-group="basic-items" data-tags="hard_to_tag">
+                    <img src="img/items/orb_of_frost.png" alt="Orb of Frost" width="120" height="90" loading="lazy">
+                    <h4>Orb of Frost</h4>
+                    <p>300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Orb_of_Frost" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="blades-of-attack item-card" data-name="Blades of Attack" data-category="equipment" data-group="basic-items" data-tags="damage tutorial">
+                    <img src="img/items/blades_of_attack.png" alt="Blades of Attack" width="120" height="90" loading="lazy">
+                    <h4>Blades of Attack</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Blades_of_Attack" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="gloves-of-haste item-card" data-name="Gloves of Haste" data-category="equipment" data-group="basic-items" data-tags="attack_speed">
+                    <img src="img/items/gloves.png" alt="Gloves of Haste" width="120" height="90" loading="lazy">
+                    <h4>Gloves of Haste</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Gloves_of_Haste" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="chainmail item-card" data-name="Chainmail" data-category="equipment" data-group="basic-items" data-tags="armor">
+                    <img src="img/items/chainmail.png" alt="Chainmail" width="120" height="90" loading="lazy">
+                    <h4>Chainmail</h4>
+                    <p>500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Chainmail" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="splintmail item-card" data-name="Splintmail" data-category="equipment" data-group="basic-items" data-tags="armor">
+                    <img src="img/items/splintmail.png" alt="Splintmail" width="120" height="90" loading="lazy">
+                    <h4>Splintmail</h4>
+                    <p>950 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Splintmail" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="javelin item-card" data-name="Javelin" data-category="equipment" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/javelin.png" alt="Javelin" width="120" height="90" loading="lazy">
+                    <h4>Javelin</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Javelin" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="helm-of-iron-will item-card" data-name="Helm of Iron Will" data-category="equipment" data-group="basic-items" data-tags="armor regen_health">
+                    <img src="img/items/helm_of_iron_will.png" alt="Helm of Iron Will" width="120" height="90" loading="lazy">
+                    <h4>Helm of Iron Will</h4>
+                    <p>975 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Helm_of_Iron_Will" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="blitz-knuckles item-card" data-name="Blitz Knuckles" data-category="equipment" data-group="basic-items" data-tags="attack_speed">
+                    <img src="img/items/blitz_knuckles.png" alt="Blitz Knuckles" width="120" height="90" loading="lazy">
+                    <h4>Blitz Knuckles</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Blitz_Knuckles" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="broadsword item-card" data-name="Broadsword" data-category="equipment" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/broadsword.png" alt="Broadsword" width="120" height="90" loading="lazy">
+                    <h4>Broadsword</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Broadsword" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="claymore item-card" data-name="Claymore" data-category="equipment" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/claymore.png" alt="Claymore" width="120" height="90" loading="lazy">
+                    <h4>Claymore</h4>
+                    <p>1350 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Claymore" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mithril-hammer item-card" data-name="Mithril Hammer" data-category="equipment" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/mithril_hammer.png" alt="Mithril Hammer" width="120" height="90" loading="lazy">
+                    <h4>Mithril Hammer</h4>
+                    <p>1600 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mithril_Hammer" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="miscellaneous item-category">
+                <h3>Miscellaneous</h3>
+                <div class="ring-of-regen item-card" data-name="Ring of Regen" data-category="miscellaneous" data-group="basic-items" data-tags="regen_health">
+                    <img src="img/items/ring_of_regen.png" alt="Ring of Regen" width="120" height="90" loading="lazy">
+                    <h4>Ring of Regen</h4>
+                    <p>175 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ring_of_Regen" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="sages-mask item-card" data-name="Sage's Mask" data-category="miscellaneous" data-group="basic-items" data-tags="regen_mana">
+                    <img src="img/items/sobi_mask.png" alt="Sage's Mask" width="120" height="90" loading="lazy">
+                    <h4>Sage's Mask</h4>
+                    <p>175 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Sage's_Mask" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="magic-stick item-card" data-name="Magic Stick" data-category="miscellaneous" data-group="basic-items" data-tags="regen_health regen_mana boost_health boost_mana laning regen_mana">
+                    <img src="img/items/magic_stick.png" alt="Magic Stick" width="120" height="90" loading="lazy">
+                    <h4>Magic Stick</h4>
+                    <p>200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Magic_Stick" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="fluffy-hat item-card" data-name="Fluffy Hat" data-category="miscellaneous" data-group="basic-items" data-tags="health_pool">
+                    <img src="img/items/fluffy_hat.png" alt="Fluffy Hat" width="120" height="90" loading="lazy">
+                    <h4>Fluffy Hat</h4>
+                    <p>250 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Fluffy_Hat" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="wind-lace item-card" data-name="Wind Lace" data-category="miscellaneous" data-group="basic-items" data-tags="armor laning">
+                    <img src="img/items/wind_lace.png" alt="Wind Lace" width="120" height="90" loading="lazy">
+                    <h4>Wind Lace</h4>
+                    <p>225 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Wind_Lace" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="boots-of-speed item-card" data-name="Boots of Speed" data-category="miscellaneous" data-group="basic-items" data-tags="move_speed mobility laning">
+                    <img src="img/items/boots.png" alt="Boots of Speed" width="120" height="90" loading="lazy">
+                    <h4>Boots of Speed</h4>
+                    <p>500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Boots_of_Speed" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ring-of-health item-card" data-name="Ring of Health" data-category="miscellaneous" data-group="basic-items" data-tags="regen_health">
+                    <img src="img/items/ring_of_health.png" alt="Ring of Health" width="120" height="90" loading="lazy">
+                    <h4>Ring of Health</h4>
+                    <p>700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ring_of_Health" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="void-stone item-card" data-name="Void Stone" data-category="miscellaneous" data-group="basic-items" data-tags="regen_mana">
+                    <img src="img/items/void_stone.png" alt="Void Stone" width="120" height="90" loading="lazy">
+                    <h4>Void Stone</h4>
+                    <p>700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Void_Stone" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="voodoo-mask item-card" data-name="Voodoo Mask" data-category="miscellaneous" data-group="basic-items" data-tags="unique">
+                    <img src="img/items/voodoo_mask.png" alt="Voodoo Mask" width="120" height="90" loading="lazy">
+                    <h4>Voodoo Mask</h4>
+                    <p>650 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Voodoo_Mask" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="shawl item-card" data-name="Shawl" data-category="miscellaneous" data-group="basic-items" data-tags="magic_resist">
+                    <img src="img/items/shawl.png" alt="Shawl" width="120" height="90" loading="lazy">
+                    <h4>Shawl</h4>
+                    <p>450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Shawl" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="cloak item-card" data-name="Cloak" data-category="miscellaneous" data-group="basic-items" data-tags="magic_resist">
+                    <img src="img/items/cloak.png" alt="Cloak" width="120" height="90" loading="lazy">
+                    <h4>Cloak</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Cloak" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="gem-of-true-sight item-card" data-name="Gem of True Sight" data-category="miscellaneous" data-group="basic-items" data-tags="see_invis">
+                    <img src="img/items/gem.png" alt="Gem of True Sight" width="120" height="90" loading="lazy">
+                    <h4>Gem of True Sight</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Gem_of_True_Sight" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="morbid-mask item-card" data-name="Morbid Mask" data-category="miscellaneous" data-group="basic-items" data-tags="unique">
+                    <img src="img/items/lifesteal.png" alt="Morbid Mask" width="120" height="90" loading="lazy">
+                    <h4>Morbid Mask</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Morbid_Mask" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="shadow-amulet item-card" data-name="Shadow Amulet" data-category="miscellaneous" data-group="basic-items" data-tags="">
+                    <img src="img/items/shadow_amulet.png" alt="Shadow Amulet" width="120" height="90" loading="lazy">
+                    <h4>Shadow Amulet</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Shadow_Amulet" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ghost-scepter item-card" data-name="Ghost Scepter" data-category="miscellaneous" data-group="basic-items" data-tags="int agi str hard_to_tag escape">
+                    <img src="img/items/ghost.png" alt="Ghost Scepter" width="120" height="90" loading="lazy">
+                    <h4>Ghost Scepter</h4>
+                    <p>1500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ghost_Scepter" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="blink-dagger item-card" data-name="Blink Dagger" data-category="miscellaneous" data-group="basic-items" data-tags="teleport mobility escape">
+                    <img src="img/items/blink.png" alt="Blink Dagger" width="120" height="90" loading="lazy">
+                    <h4>Blink Dagger</h4>
+                    <p>2250 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Blink_Dagger" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="chasm-stone item-card" data-name="Chasm Stone" data-category="miscellaneous" data-group="basic-items" data-tags="aoe">
+                    <img src="img/items/chasm_stone.png" alt="Chasm Stone" width="120" height="90" loading="lazy">
+                    <h4>Chasm Stone</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Chasm_Stone" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="secret item-category">
+                <h3>Secret Shop</h3>
+                <div class="energy-booster item-card" data-name="Energy Booster" data-category="secret" data-group="basic-items" data-tags="mana_pool">
+                    <img src="img/items/energy_booster.png" alt="Energy Booster" width="120" height="90" loading="lazy">
+                    <h4>Energy Booster</h4>
+                    <p>800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Energy_Booster" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="vitality-booster item-card" data-name="Vitality Booster" data-category="secret" data-group="basic-items" data-tags="health_pool">
+                    <img src="img/items/vitality_booster.png" alt="Vitality Booster" width="120" height="90" loading="lazy">
+                    <h4>Vitality Booster</h4>
+                    <p>1000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Vitality_Booster" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="point-booster item-card" data-name="Point Booster" data-category="secret" data-group="basic-items" data-tags="mana_pool health_pool">
+                    <img src="img/items/point_booster.png" alt="Point Booster" width="120" height="90" loading="lazy">
+                    <h4>Point Booster</h4>
+                    <p>1200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Point_Booster" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="talisman-of-evasion item-card" data-name="Talisman of Evasion" data-category="secret" data-group="basic-items" data-tags="evasion">
+                    <img src="img/items/talisman_of_evasion.png" alt="Talisman of Evasion" width="120" height="90" loading="lazy">
+                    <h4>Talisman of Evasion</h4>
+                    <p>1300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Talisman_of_Evasion" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="platemail item-card" data-name="Platemail" data-category="secret" data-group="basic-items" data-tags="armor">
+                    <img src="img/items/platemail.png" alt="Platemail" width="120" height="90" loading="lazy">
+                    <h4>Platemail</h4>
+                    <p>1400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Platemail" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ring-of-tarrasque item-card" data-name="Ring of Tarrasque" data-category="secret" data-group="basic-items" data-tags="regen_health">
+                    <img src="img/items/ring_of_tarrasque.png" alt="Ring of Tarrasque" width="120" height="90" loading="lazy">
+                    <h4>Ring of Tarrasque</h4>
+                    <p>1700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ring_of_Tarrasque" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="tiara-of-selemene item-card" data-name="Tiara of Selemene" data-category="secret" data-group="basic-items" data-tags="regen_mana">
+                    <img src="img/items/tiara_of_selemene.png" alt="Tiara of Selemene" width="120" height="90" loading="lazy">
+                    <h4>Tiara of Selemene</h4>
+                    <p>1700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Tiara_of_Selemene" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="hyperstone item-card" data-name="Hyperstone" data-category="secret" data-group="basic-items" data-tags="attack_speed">
+                    <img src="img/items/hyperstone.png" alt="Hyperstone" width="120" height="90" loading="lazy">
+                    <h4>Hyperstone</h4>
+                    <p>2000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Hyperstone" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="demon-edge item-card" data-name="Demon Edge" data-category="secret" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/demon_edge.png" alt="Demon Edge" width="120" height="90" loading="lazy">
+                    <h4>Demon Edge</h4>
+                    <p>2200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Demon_Edge" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="eaglesong item-card" data-name="Eaglesong" data-category="secret" data-group="basic-items" data-tags="agi">
+                    <img src="img/items/eagle.png" alt="Eaglesong" width="120" height="90" loading="lazy">
+                    <h4>Eaglesong</h4>
+                    <p>2800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Eaglesong" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mystic-staff item-card" data-name="Mystic Staff" data-category="secret" data-group="basic-items" data-tags="int">
+                    <img src="img/items/mystic_staff.png" alt="Mystic Staff" width="120" height="90" loading="lazy">
+                    <h4>Mystic Staff</h4>
+                    <p>2800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mystic_Staff" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="reaver item-card" data-name="Reaver" data-category="secret" data-group="basic-items" data-tags="str">
+                    <img src="img/items/reaver.png" alt="Reaver" width="120" height="90" loading="lazy">
+                    <h4>Reaver</h4>
+                    <p>2800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Reaver" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ultimate-orb item-card" data-name="Ultimate Orb" data-category="secret" data-group="basic-items" data-tags="agi int str">
+                    <img src="img/items/ultimate_orb.png" alt="Ultimate Orb" width="120" height="90" loading="lazy">
+                    <h4>Ultimate Orb</h4>
+                    <p>2800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ultimate_Orb" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="sacred-relic item-card" data-name="Sacred Relic" data-category="secret" data-group="basic-items" data-tags="damage">
+                    <img src="img/items/relic.png" alt="Sacred Relic" width="120" height="90" loading="lazy">
+                    <h4>Sacred Relic</h4>
+                    <p>3400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Sacred_Relic" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+        </section>
+        <section class="upgraded-items item-group">
+            <h2>Upgraded Items</h2>
+            <section class="accessories item-category">
+                <h3>Accessories</h3>
+                <div class="bracer item-card" data-name="Bracer" data-category="accessories" data-group="upgraded-items" data-tags="damage int agi str">
+                    <img src="img/items/bracer.png" alt="Bracer" width="120" height="90" loading="lazy">
+                    <h4>Bracer</h4>
+                    <p>505 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Bracer" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="null-talisman item-card" data-name="Null Talisman" data-category="accessories" data-group="upgraded-items" data-tags="damage int agi str">
+                    <img src="img/items/null_talisman.png" alt="Null Talisman" width="120" height="90" loading="lazy">
+                    <h4>Null Talisman</h4>
+                    <p>505 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Null_Talisman" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="wraith-band item-card" data-name="Wraith Band" data-category="accessories" data-group="upgraded-items" data-tags="damage int agi str">
+                    <img src="img/items/wraith_band.png" alt="Wraith Band" width="120" height="90" loading="lazy">
+                    <h4>Wraith Band</h4>
+                    <p>505 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Wraith_Band" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="magic-wand item-card" data-name="Magic Wand" data-category="accessories" data-group="upgraded-items" data-tags="regen_health regen_mana boost_health boost_mana int agi str laning regen_mana">
+                    <img src="img/items/magic_wand.png" alt="Magic Wand" width="120" height="90" loading="lazy">
+                    <h4>Magic Wand</h4>
+                    <p>460 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Magic_Wand" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="soul-ring item-card" data-name="Soul Ring" data-category="accessories" data-group="upgraded-items" data-tags="regen_health boost_mana mana regen_mana">
+                    <img src="img/items/soul_ring.png" alt="Soul Ring" width="120" height="90" loading="lazy">
+                    <h4>Soul Ring</h4>
+                    <p>805 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Soul_Ring" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="orb-of-corrosion item-card" data-name="Orb of Corrosion" data-category="accessories" data-group="upgraded-items" data-tags="hard_to_tag">
+                    <img src="img/items/orb_of_corrosion.png" alt="Orb of Corrosion" width="120" height="90" loading="lazy">
+                    <h4>Orb of Corrosion</h4>
+                    <p>1050 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Orb_of_Corrosion" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="falcon-blade item-card" data-name="Falcon Blade" data-category="accessories" data-group="upgraded-items" data-tags="hard_to_tag">
+                    <img src="img/items/falcon_blade.png" alt="Falcon Blade" width="120" height="90" loading="lazy">
+                    <h4>Falcon Blade</h4>
+                    <p>1125 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Falcon_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="perseverance item-card" data-name="Perseverance" data-category="accessories" data-group="upgraded-items" data-tags="regen_health regen_mana">
+                    <img src="img/items/pers.png" alt="Perseverance" width="120" height="90" loading="lazy">
+                    <h4>Perseverance</h4>
+                    <p>1400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Perseverance" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="power-treads item-card" data-name="Power Treads" data-category="accessories" data-group="upgraded-items" data-tags="attack_speed move_speed int agi str mobility">
+                    <img src="img/items/power_treads.png" alt="Power Treads" width="120" height="90" loading="lazy">
+                    <h4>Power Treads</h4>
+                    <p>1400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Power_Treads" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="phase-boots item-card" data-name="Phase Boots" data-category="accessories" data-group="upgraded-items" data-tags="damage move_speed hard_to_tag mobility">
+                    <img src="img/items/phase_boots.png" alt="Phase Boots" width="120" height="90" loading="lazy">
+                    <h4>Phase Boots</h4>
+                    <p>1450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Phase_Boots" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="oblivion-staff item-card" data-name="Oblivion Staff" data-category="accessories" data-group="upgraded-items" data-tags="damage int attack_speed regen_mana">
+                    <img src="img/items/oblivion_staff.png" alt="Oblivion Staff" width="120" height="90" loading="lazy">
+                    <h4>Oblivion Staff</h4>
+                    <p>1625 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Oblivion_Staff" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mask-of-madness item-card" data-name="Mask of Madness" data-category="accessories" data-group="upgraded-items" data-tags="unique hard_to_tag farming dps">
+                    <img src="img/items/mask_of_madness.png" alt="Mask of Madness" width="120" height="90" loading="lazy">
+                    <h4>Mask of Madness</h4>
+                    <p>1900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mask_of_Madness" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="hand-of-midas item-card" data-name="Hand of Midas" data-category="accessories" data-group="upgraded-items" data-tags="attack_speed hard_to_tag farming">
+                    <img src="img/items/hand_of_midas.png" alt="Hand of Midas" width="120" height="90" loading="lazy">
+                    <h4>Hand of Midas</h4>
+                    <p>2200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Hand_of_Midas" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="boots-of-travel item-card" data-name="Boots of Travel" data-category="accessories" data-group="upgraded-items" data-tags="teleport move_speed mobility">
+                    <img src="img/items/travel_boots.png" alt="Boots of Travel" width="120" height="90" loading="lazy">
+                    <h4>Boots of Travel</h4>
+                    <p>2500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Boots_of_Travel" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="boots-of-travel-2 item-card" data-name="Boots of Travel 2" data-category="accessories" data-group="upgraded-items" data-tags="teleport move_speed mobility">
+                    <img src="img/items/travel_boots_2.png" alt="Boots of Travel 2" width="120" height="90" loading="lazy">
+                    <h4>Boots of Travel 2</h4>
+                    <p>4500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Boots_of_Travel" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="moon-shard item-card" data-name="Moon Shard" data-category="accessories" data-group="upgraded-items" data-tags="attack_speed">
+                    <img src="img/items/moon_shard.png" alt="Moon Shard" width="120" height="90" loading="lazy">
+                    <h4>Moon Shard</h4>
+                    <p>4000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Moon_Shard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="specialists-array item-card" data-name="Specialist's Array" data-category="accessories" data-group="upgraded-items" data-tags="int damage hard_to_tag mobility escape save">
+                    <img src="img/items/specialists_array.png" alt="Specialist's Array" width="120" height="90" loading="lazy">
+                    <h4>Specialist's Array</h4>
+                    <p>2550 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Specialist's_Array" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="support item-category">
+                <h3>Support</h3>
+                <div class="buckler item-card" data-name="Buckler" data-category="support" data-group="upgraded-items" data-tags="armor boost_armor">
+                    <img src="img/items/buckler.png" alt="Buckler" width="120" height="90" loading="lazy">
+                    <h4>Buckler</h4>
+                    <p>425 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Buckler" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="headdress item-card" data-name="Headdress" data-category="support" data-group="upgraded-items" data-tags="str int agi regen_health">
+                    <img src="img/items/headdress.png" alt="Headdress" width="120" height="90" loading="lazy">
+                    <h4>Headdress</h4>
+                    <p>425 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Headdress" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ring-of-basilius item-card" data-name="Ring of Basilius" data-category="support" data-group="upgraded-items" data-tags="regen_mana">
+                    <img src="img/items/ring_of_basilius.png" alt="Ring of Basilius" width="120" height="90" loading="lazy">
+                    <h4>Ring of Basilius</h4>
+                    <p>425 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ring_of_Basilius" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="urn-of-shadows item-card" data-name="Urn of Shadows" data-category="support" data-group="upgraded-items" data-tags="regen_mana str boost_health teamfight">
+                    <img src="img/items/urn_of_shadows.png" alt="Urn of Shadows" width="120" height="90" loading="lazy">
+                    <h4>Urn of Shadows</h4>
+                    <p>825 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Urn_of_Shadows" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="tranquil-boots item-card" data-name="Tranquil Boots" data-category="support" data-group="upgraded-items" data-tags="move_speed regen_health armor">
+                    <img src="img/items/tranquil_boots.png" alt="Tranquil Boots" width="120" height="90" loading="lazy">
+                    <h4>Tranquil Boots</h4>
+                    <p>900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Tranquil_Boots" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="arcane-boots item-card" data-name="Arcane Boots" data-category="support" data-group="upgraded-items" data-tags="move_speed boost_mana mana_pool mana regen_mana">
+                    <img src="img/items/arcane_boots.png" alt="Arcane Boots" width="120" height="90" loading="lazy">
+                    <h4>Arcane Boots</h4>
+                    <p>1500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Arcane_Boots" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="pavise item-card" data-name="Pavise" data-category="support" data-group="upgraded-items" data-tags="armor regen_mana hard_to_tag teamfight save tank">
+                    <img src="img/items/pavise.png" alt="Pavise" width="120" height="90" loading="lazy">
+                    <h4>Pavise</h4>
+                    <p>1350 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Pavise" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="drum-of-endurance item-card" data-name="Drum of Endurance" data-category="support" data-group="upgraded-items" data-tags="str int damage move_speed attack_speed hard_to_tag teamfight">
+                    <img src="img/items/ancient_janggo.png" alt="Drum of Endurance" width="120" height="90" loading="lazy">
+                    <h4>Drum of Endurance</h4>
+                    <p>1625 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Drum_of_Endurance" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mekansm item-card" data-name="Mekansm" data-category="support" data-group="upgraded-items" data-tags="agi int str armor boost_health teamfight save tank">
+                    <img src="img/items/mekansm.png" alt="Mekansm" width="120" height="90" loading="lazy">
+                    <h4>Mekansm</h4>
+                    <p>1775 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mekansm" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="vladmirs-offering item-card" data-name="Vladmir's Offering" data-category="support" data-group="upgraded-items" data-tags="damage armor regen_mana teamfight">
+                    <img src="img/items/vladmir.png" alt="Vladmir's Offering" width="120" height="90" loading="lazy">
+                    <h4>Vladmir's Offering</h4>
+                    <p>2200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Vladmir's_Offering" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="holy-locket item-card" data-name="Holy Locket" data-category="support" data-group="upgraded-items" data-tags="teamfight save">
+                    <img src="img/items/holy_locket.png" alt="Holy Locket" width="120" height="90" loading="lazy">
+                    <h4>Holy Locket</h4>
+                    <p>2250 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Holy_Locket" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="spirit-vessel item-card" data-name="Spirit Vessel" data-category="support" data-group="upgraded-items" data-tags="teamfight">
+                    <img src="img/items/spirit_vessel.png" alt="Spirit Vessel" width="120" height="90" loading="lazy">
+                    <h4>Spirit Vessel</h4>
+                    <p>2725 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Spirit_Vessel" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="pipe-of-insight item-card" data-name="Pipe of Insight" data-category="support" data-group="upgraded-items" data-tags="regen_health boost_magic_resist teamfight tank magic_resist">
+                    <img src="img/items/pipe.png" alt="Pipe of Insight" width="120" height="90" loading="lazy">
+                    <h4>Pipe of Insight</h4>
+                    <p>3725 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Pipe_of_Insight" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="guardian-greaves item-card" data-name="Guardian Greaves" data-category="support" data-group="upgraded-items" data-tags="int armor regen_health hard_to_tag teamfight save tank regen_mana">
+                    <img src="img/items/guardian_greaves.png" alt="Guardian Greaves" width="120" height="90" loading="lazy">
+                    <h4>Guardian Greaves</h4>
+                    <p>4450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Guardian_Greaves" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="boots-of-bearing item-card" data-name="Boots of Bearing" data-category="support" data-group="upgraded-items" data-tags="str int damage move_speed attack_speed hard_to_tag mobility teamfight">
+                    <img src="img/items/boots_of_bearing.png" alt="Boots of Bearing" width="120" height="90" loading="lazy">
+                    <h4>Boots of Bearing</h4>
+                    <p>4225 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Boots_of_Bearing" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="solar-crest item-card" data-name="Solar Crest" data-category="support" data-group="upgraded-items" data-tags="armor regen_mana hard_to_tag teamfight save tank">
+                    <img src="img/items/solar_crest.png" alt="Solar Crest" width="120" height="90" loading="lazy">
+                    <h4>Solar Crest</h4>
+                    <p>2575 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Solar_Crest" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="magical item-category">
+                <h3>Magical</h3>
+                <div class="veil-of-discord item-card" data-name="Veil of Discord" data-category="magical" data-group="upgraded-items" data-tags="int regen_health hard_to_tag magic_dmg">
+                    <img src="img/items/veil_of_discord.png" alt="Veil of Discord" width="120" height="90" loading="lazy">
+                    <h4>Veil of Discord</h4>
+                    <p>1700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Veil_of_Discord" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="glimmer-cape item-card" data-name="Glimmer Cape" data-category="magical" data-group="upgraded-items" data-tags="teamfight escape save magic_resist">
+                    <img src="img/items/glimmer_cape.png" alt="Glimmer Cape" width="120" height="90" loading="lazy">
+                    <h4>Glimmer Cape</h4>
+                    <p>2150 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Glimmer_Cape" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="force-staff item-card" data-name="Force Staff" data-category="magical" data-group="upgraded-items" data-tags="int damage hard_to_tag mobility escape save">
+                    <img src="img/items/force_staff.png" alt="Force Staff" width="120" height="90" loading="lazy">
+                    <h4>Force Staff</h4>
+                    <p>2200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Force_Staff" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aether-lens item-card" data-name="Aether Lens" data-category="magical" data-group="upgraded-items" data-tags="int regen_mana hard_to_tag">
+                    <img src="img/items/aether_lens.png" alt="Aether Lens" width="120" height="90" loading="lazy">
+                    <h4>Aether Lens</h4>
+                    <p>2275 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Aether_Lens" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="witch-blade item-card" data-name="Witch Blade" data-category="magical" data-group="upgraded-items" data-tags="damage int attack_speed regen_mana dps magic_dmg">
+                    <img src="img/items/witch_blade.png" alt="Witch Blade" width="120" height="90" loading="lazy">
+                    <h4>Witch Blade</h4>
+                    <p>2775 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Witch_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="euls-scepter-of-divinity item-card" data-name="Eul's Scepter of Divinity" data-category="magical" data-group="upgraded-items" data-tags="int regen_mana move_speed hard_to_tag escape disable">
+                    <img src="img/items/cyclone.png" alt="Eul's Scepter of Divinity" width="120" height="90" loading="lazy">
+                    <h4>Eul's Scepter of Divinity</h4>
+                    <p>2600 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Eul's_Scepter_of_Divinity" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="rod-of-atos item-card" data-name="Rod of Atos" data-category="magical" data-group="upgraded-items" data-tags="int regen_health disable">
+                    <img src="img/items/rod_of_atos.png" alt="Rod of Atos" width="120" height="90" loading="lazy">
+                    <h4>Rod of Atos</h4>
+                    <p>2250 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Rod_of_Atos" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dagon item-card" data-name="Dagon" data-category="magical" data-group="upgraded-items" data-tags="damage int str agi hard_to_tag magic_dmg">
+                    <img src="img/items/dagon.png" alt="Dagon" width="120" height="90" loading="lazy">
+                    <h4>Dagon</h4>
+                    <p>3000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dagon" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dagon-2 item-card" data-name="Dagon 2" data-category="magical" data-group="upgraded-items" data-tags="damage int str agi hard_to_tag magic_dmg">
+                    <img src="img/items/dagon_2.png" alt="Dagon 2" width="120" height="90" loading="lazy">
+                    <h4>Dagon 2</h4>
+                    <p>4100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dagon" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dagon-3 item-card" data-name="Dagon 3" data-category="magical" data-group="upgraded-items" data-tags="damage int str agi hard_to_tag magic_dmg">
+                    <img src="img/items/dagon_3.png" alt="Dagon 3" width="120" height="90" loading="lazy">
+                    <h4>Dagon 3</h4>
+                    <p>5200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dagon" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dagon-4 item-card" data-name="Dagon 4" data-category="magical" data-group="upgraded-items" data-tags="damage int str agi hard_to_tag magic_dmg">
+                    <img src="img/items/dagon_4.png" alt="Dagon 4" width="120" height="90" loading="lazy">
+                    <h4>Dagon 4</h4>
+                    <p>6300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dagon" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dagon-5 item-card" data-name="Dagon 5" data-category="magical" data-group="upgraded-items" data-tags="damage int str agi hard_to_tag magic_dmg">
+                    <img src="img/items/dagon_5.png" alt="Dagon 5" width="120" height="90" loading="lazy">
+                    <h4>Dagon 5</h4>
+                    <p>7400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dagon" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="orchid-malevolence item-card" data-name="Orchid Malevolence" data-category="magical" data-group="upgraded-items" data-tags="attack_speed damage regen_mana hard_to_tag dps disable">
+                    <img src="img/items/orchid.png" alt="Orchid Malevolence" width="120" height="90" loading="lazy">
+                    <h4>Orchid Malevolence</h4>
+                    <p>3275 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Orchid_Malevolence" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aghanims-scepter item-card" data-name="Aghanim's Scepter" data-category="magical" data-group="upgraded-items" data-tags="int str agi mana_pool health_pool hard_to_tag">
+                    <img src="img/items/ultimate_scepter.png" alt="Aghanim's Scepter" width="120" height="90" loading="lazy">
+                    <h4>Aghanim's Scepter</h4>
+                    <p>4200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Aghanim's_Scepter" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aghanims-blessing item-card" data-name="Aghanim's Blessing" data-category="magical" data-group="upgraded-items" data-tags="int str agi mana_pool health_pool hard_to_tag">
+                    <img src="img/items/ultimate_scepter_2.png" alt="Aghanim's Blessing" width="120" height="90" loading="lazy">
+                    <h4>Aghanim's Blessing</h4>
+                    <p>5800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Aghanim's_Blessing" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="refresher-orb item-card" data-name="Refresher Orb" data-category="magical" data-group="upgraded-items" data-tags="regen_health regen_mana hard_to_tag teamfight">
+                    <img src="img/items/refresher.png" alt="Refresher Orb" width="120" height="90" loading="lazy">
+                    <h4>Refresher Orb</h4>
+                    <p>5000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Refresher_Orb" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="octarine-core item-card" data-name="Octarine Core" data-category="magical" data-group="upgraded-items" data-tags="move_speed boost_mana mana_pool mana">
+                    <img src="img/items/octarine_core.png" alt="Octarine Core" width="120" height="90" loading="lazy">
+                    <h4>Octarine Core</h4>
+                    <p>5100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Octarine_Core" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="scythe-of-vyse item-card" data-name="Scythe of Vyse" data-category="magical" data-group="upgraded-items" data-tags="int regen_mana agi hard_to_tag disable">
+                    <img src="img/items/sheepstick.png" alt="Scythe of Vyse" width="120" height="90" loading="lazy">
+                    <h4>Scythe of Vyse</h4>
+                    <p>5200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Scythe_of_Vyse" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="gleipnir item-card" data-name="Gleipnir" data-category="magical" data-group="upgraded-items" data-tags="damage attack_speed unique magic_dmg disable">
+                    <img src="img/items/gungir.png" alt="Gleipnir" width="120" height="90" loading="lazy">
+                    <h4>Gleipnir</h4>
+                    <p>4650 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Gleipnir" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="wind-waker item-card" data-name="Wind Waker" data-category="magical" data-group="upgraded-items" data-tags="int regen_mana move_speed hard_to_tag escape save disable">
+                    <img src="img/items/wind_waker.png" alt="Wind Waker" width="120" height="90" loading="lazy">
+                    <h4>Wind Waker</h4>
+                    <p>6800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Wind_Waker" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="essence-distiller item-card" data-name="Essence Distiller" data-category="magical" data-group="upgraded-items" data-tags="teamfight">
+                    <img src="img/items/essence_distiller.png" alt="Essence Distiller" width="120" height="90" loading="lazy">
+                    <h4>Essence Distiller</h4>
+                    <p>1775 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Essence_Distiller" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="parasma item-card" data-name="Parasma" data-category="magical" data-group="upgraded-items" data-tags="int hard_to_tag dps magic_dmg">
+                    <img src="img/items/devastator.png" alt="Parasma" width="120" height="90" loading="lazy">
+                    <h4>Parasma</h4>
+                    <p>5975 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Parasma" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="armor item-category">
+                <h3>Armor</h3>
+                <div class="vanguard item-card" data-name="Vanguard" data-category="armor" data-group="upgraded-items" data-tags="regen_health block health_pool tank">
+                    <img src="img/items/vanguard.png" alt="Vanguard" width="120" height="90" loading="lazy">
+                    <h4>Vanguard</h4>
+                    <p>1700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Vanguard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="blade-mail item-card" data-name="Blade Mail" data-category="armor" data-group="upgraded-items" data-tags="damage armor int hard_to_tag tank">
+                    <img src="img/items/blade_mail.png" alt="Blade Mail" width="120" height="90" loading="lazy">
+                    <h4>Blade Mail</h4>
+                    <p>2400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Blade_Mail" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aeon-disk item-card" data-name="Aeon Disk" data-category="armor" data-group="upgraded-items" data-tags="str regen_health health_pool escape tank">
+                    <img src="img/items/aeon_disk.png" alt="Aeon Disk" width="120" height="90" loading="lazy">
+                    <h4>Aeon Disk</h4>
+                    <p>3000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Aeon_Disk" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="soul-booster item-card" data-name="Soul Booster" data-category="armor" data-group="upgraded-items" data-tags="regen_health regen_mana health_pool mana_pool">
+                    <img src="img/items/soul_booster.png" alt="Soul Booster" width="120" height="90" loading="lazy">
+                    <h4>Soul Booster</h4>
+                    <p>3000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Soul_Booster" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="crimson-guard item-card" data-name="Crimson Guard" data-category="armor" data-group="upgraded-items" data-tags="armor boost_armor regen_health block health_pool teamfight tank">
+                    <img src="img/items/crimson_guard.png" alt="Crimson Guard" width="120" height="90" loading="lazy">
+                    <h4>Crimson Guard</h4>
+                    <p>3725 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Crimson_Guard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="lotus-orb item-card" data-name="Lotus Orb" data-category="armor" data-group="upgraded-items" data-tags="regen_health regen_mana str agi int hard_to_tag teamfight save">
+                    <img src="img/items/lotus_orb.png" alt="Lotus Orb" width="120" height="90" loading="lazy">
+                    <h4>Lotus Orb</h4>
+                    <p>3850 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Lotus_Orb" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="black-king-bar item-card" data-name="Black King Bar" data-category="armor" data-group="upgraded-items" data-tags="str damage hard_to_tag teamfight escape tank">
+                    <img src="img/items/black_king_bar.png" alt="Black King Bar" width="120" height="90" loading="lazy">
+                    <h4>Black King Bar</h4>
+                    <p>4050 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Black_King_Bar" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="bloodstone item-card" data-name="Bloodstone" data-category="armor" data-group="upgraded-items" data-tags="int regen_health mana_pool health_pool tank">
+                    <img src="img/items/bloodstone.png" alt="Bloodstone" width="120" height="90" loading="lazy">
+                    <h4>Bloodstone</h4>
+                    <p>4700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Bloodstone" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="hurricane-pike item-card" data-name="Hurricane Pike" data-category="armor" data-group="upgraded-items" data-tags="int damage attack_speed hard_to_tag mobility escape save">
+                    <img src="img/items/hurricane_pike.png" alt="Hurricane Pike" width="120" height="90" loading="lazy">
+                    <h4>Hurricane Pike</h4>
+                    <p>4550 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Hurricane_Pike" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="manta-style item-card" data-name="Manta Style" data-category="armor" data-group="upgraded-items" data-tags="agi str int attack_speed move_speed hard_to_tag farming">
+                    <img src="img/items/manta.png" alt="Manta Style" width="120" height="90" loading="lazy">
+                    <h4>Manta Style</h4>
+                    <p>4650 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Manta_Style" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="linkens-sphere item-card" data-name="Linken's Sphere" data-category="armor" data-group="upgraded-items" data-tags="regen_health regen_mana str agi int hard_to_tag teamfight save">
+                    <img src="img/items/sphere.png" alt="Linken's Sphere" width="120" height="90" loading="lazy">
+                    <h4>Linken's Sphere</h4>
+                    <p>4800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Linken's_Sphere" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="assault-cuirass item-card" data-name="Assault Cuirass" data-category="armor" data-group="upgraded-items" data-tags="attack_speed armor hard_to_tag teamfight tank">
+                    <img src="img/items/assault.png" alt="Assault Cuirass" width="120" height="90" loading="lazy">
+                    <h4>Assault Cuirass</h4>
+                    <p>5125 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Assault_Cuirass" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="shivas-guard item-card" data-name="Shiva's Guard" data-category="armor" data-group="upgraded-items" data-tags="armor hard_to_tag teamfight tank magic_dmg">
+                    <img src="img/items/shivas_guard.png" alt="Shiva's Guard" width="120" height="90" loading="lazy">
+                    <h4>Shiva's Guard</h4>
+                    <p>4500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Shiva's_Guard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="heart-of-tarrasque item-card" data-name="Heart of Tarrasque" data-category="armor" data-group="upgraded-items" data-tags="str regen_health health_pool tank">
+                    <img src="img/items/heart.png" alt="Heart of Tarrasque" width="120" height="90" loading="lazy">
+                    <h4>Heart of Tarrasque</h4>
+                    <p>5300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Heart_of_Tarrasque" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="helm-of-the-dominator item-card" data-name="Helm of the Dominator" data-category="armor" data-group="upgraded-items" data-tags="damage armor unique hard_to_tag">
+                    <img src="img/items/helm_of_the_dominator.png" alt="Helm of the Dominator" width="120" height="90" loading="lazy">
+                    <h4>Helm of the Dominator</h4>
+                    <p>2550 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Helm_of_the_Dominator" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="helm-of-the-overlord item-card" data-name="Helm of the Overlord" data-category="armor" data-group="upgraded-items" data-tags="damage armor unique hard_to_tag">
+                    <img src="img/items/helm_of_the_overlord.png" alt="Helm of the Overlord" width="120" height="90" loading="lazy">
+                    <h4>Helm of the Overlord</h4>
+                    <p>5650 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Helm_of_the_Overlord" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="consecrated-wraps item-card" data-name="Consecrated Wraps" data-category="armor" data-group="upgraded-items" data-tags="magic_resist move_speed health_pool">
+                    <img src="img/items/consecrated_wraps.png" alt="Consecrated Wraps" width="120" height="90" loading="lazy">
+                    <h4>Consecrated Wraps</h4>
+                    <p>2600 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Consecrated_Wraps" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="weapons item-category">
+                <h3>Weapons</h3>
+                <div class="crystalys item-card" data-name="Crystalys" data-category="weapons" data-group="upgraded-items" data-tags="damage crit dps">
+                    <img src="img/items/lesser_crit.png" alt="Crystalys" width="120" height="90" loading="lazy">
+                    <h4>Crystalys</h4>
+                    <p>2000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Crystalys" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="armlet-of-mordiggian item-card" data-name="Armlet of Mordiggian" data-category="weapons" data-group="upgraded-items" data-tags="damage attack_speed armor regen_health hard_to_tag dps tank">
+                    <img src="img/items/armlet.png" alt="Armlet of Mordiggian" width="120" height="90" loading="lazy">
+                    <h4>Armlet of Mordiggian</h4>
+                    <p>2500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Armlet_of_Mordiggian" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="meteor-hammer item-card" data-name="Meteor Hammer" data-category="weapons" data-group="upgraded-items" data-tags="farming magic_dmg disable">
+                    <img src="img/items/meteor_hammer.png" alt="Meteor Hammer" width="120" height="90" loading="lazy">
+                    <h4>Meteor Hammer</h4>
+                    <p>2850 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Meteor_Hammer" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="skull-basher item-card" data-name="Skull Basher" data-category="weapons" data-group="upgraded-items" data-tags="damage str hard_to_tag">
+                    <img src="img/items/basher.png" alt="Skull Basher" width="120" height="90" loading="lazy">
+                    <h4>Skull Basher</h4>
+                    <p>2875 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Skull_Basher" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="shadow-blade item-card" data-name="Shadow Blade" data-category="weapons" data-group="upgraded-items" data-tags="damage attack_speed movespeed hard_to_tag dps">
+                    <img src="img/items/invis_sword.png" alt="Shadow Blade" width="120" height="90" loading="lazy">
+                    <h4>Shadow Blade</h4>
+                    <p>3250 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Shadow_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="desolator item-card" data-name="Desolator" data-category="weapons" data-group="upgraded-items" data-tags="damage unique dps">
+                    <img src="img/items/desolator.png" alt="Desolator" width="120" height="90" loading="lazy">
+                    <h4>Desolator</h4>
+                    <p>3500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Desolator" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="battle-fury item-card" data-name="Battle Fury" data-category="weapons" data-group="upgraded-items" data-tags="damage health_regen mana_regen hard_to_tag farming dps">
+                    <img src="img/items/bfury.png" alt="Battle Fury" width="120" height="90" loading="lazy">
+                    <h4>Battle Fury</h4>
+                    <p>3900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Battle_Fury" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="nullifier item-card" data-name="Nullifier" data-category="weapons" data-group="upgraded-items" data-tags="teamfight disable">
+                    <img src="img/items/nullifier.png" alt="Nullifier" width="120" height="90" loading="lazy">
+                    <h4>Nullifier</h4>
+                    <p>4350 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Nullifier" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="monkey-king-bar item-card" data-name="Monkey King Bar" data-category="weapons" data-group="upgraded-items" data-tags="damage attack_speed hard_to_tag dps">
+                    <img src="img/items/monkey_king_bar.png" alt="Monkey King Bar" width="120" height="90" loading="lazy">
+                    <h4>Monkey King Bar</h4>
+                    <p>5000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Monkey_King_Bar" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="radiance item-card" data-name="Radiance" data-category="weapons" data-group="upgraded-items" data-tags="damage farming dps">
+                    <img src="img/items/radiance.png" alt="Radiance" width="120" height="90" loading="lazy">
+                    <h4>Radiance</h4>
+                    <p>4700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Radiance" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="revenants-brooch item-card" data-name="Revenant's Brooch" data-category="weapons" data-group="upgraded-items" data-tags="int hard_to_tag crit dps">
+                    <img src="img/items/revenants_brooch.png" alt="Revenant's Brooch" width="120" height="90" loading="lazy">
+                    <h4>Revenant's Brooch</h4>
+                    <p>3300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Revenant's_Brooch" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="daedalus item-card" data-name="Daedalus" data-category="weapons" data-group="upgraded-items" data-tags="damage crit dps">
+                    <img src="img/items/greater_crit.png" alt="Daedalus" width="120" height="90" loading="lazy">
+                    <h4>Daedalus</h4>
+                    <p>5200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Daedalus" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ethereal-blade item-card" data-name="Ethereal Blade" data-category="weapons" data-group="upgraded-items" data-tags="agi str int hard_to_tag escape save magic_dmg">
+                    <img src="img/items/ethereal_blade.png" alt="Ethereal Blade" width="120" height="90" loading="lazy">
+                    <h4>Ethereal Blade</h4>
+                    <p>5200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Ethereal_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="khanda item-card" data-name="Khanda" data-category="weapons" data-group="upgraded-items" data-tags="hard_to_tag magic_dmg">
+                    <img src="img/items/angels_demise.png" alt="Khanda" width="120" height="90" loading="lazy">
+                    <h4>Khanda</h4>
+                    <p>5600 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Khanda" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="butterfly item-card" data-name="Butterfly" data-category="weapons" data-group="upgraded-items" data-tags="agi damage evasion attack_speed dps tank">
+                    <img src="img/items/butterfly.png" alt="Butterfly" width="120" height="90" loading="lazy">
+                    <h4>Butterfly</h4>
+                    <p>5450 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Butterfly" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="silver-edge item-card" data-name="Silver Edge" data-category="weapons" data-group="upgraded-items" data-tags="damage attack_speed movespeed hard_to_tag dps">
+                    <img src="img/items/silver_edge.png" alt="Silver Edge" width="120" height="90" loading="lazy">
+                    <h4>Silver Edge</h4>
+                    <p>5700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Silver_Edge" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="abyssal-blade item-card" data-name="Abyssal Blade" data-category="weapons" data-group="upgraded-items" data-tags="damage str hard_to_tag disable">
+                    <img src="img/items/abyssal_blade.png" alt="Abyssal Blade" width="120" height="90" loading="lazy">
+                    <h4>Abyssal Blade</h4>
+                    <p>6250 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Abyssal_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="divine-rapier item-card" data-name="Divine Rapier" data-category="weapons" data-group="upgraded-items" data-tags="damage dps magic_dmg">
+                    <img src="img/items/rapier.png" alt="Divine Rapier" width="120" height="90" loading="lazy">
+                    <h4>Divine Rapier</h4>
+                    <p>5600 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Divine_Rapier" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="disperser item-card" data-name="Disperser" data-category="weapons" data-group="upgraded-items" data-tags="agi int unique hard_to_tag">
+                    <img src="img/items/disperser.png" alt="Disperser" width="120" height="90" loading="lazy">
+                    <h4>Disperser</h4>
+                    <p>6100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Disperser" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="bloodthorn item-card" data-name="Bloodthorn" data-category="weapons" data-group="upgraded-items" data-tags="int attack_speed damage regen_mana damage hard_to_tag dps disable">
+                    <img src="img/items/bloodthorn.png" alt="Bloodthorn" width="120" height="90" loading="lazy">
+                    <h4>Bloodthorn</h4>
+                    <p>6400 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Bloodthorn" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="artifacts item-category">
+                <h3>Artifacts</h3>
+                <div class="dragon-lance item-card" data-name="Dragon Lance" data-category="artifacts" data-group="upgraded-items" data-tags="damage">
+                    <img src="img/items/dragon_lance.png" alt="Dragon Lance" width="120" height="90" loading="lazy">
+                    <h4>Dragon Lance</h4>
+                    <p>2000 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Dragon_Lance" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="kaya item-card" data-name="Kaya" data-category="artifacts" data-group="upgraded-items" data-tags="int mana magic_dmg">
+                    <img src="img/items/kaya.png" alt="Kaya" width="120" height="90" loading="lazy">
+                    <h4>Kaya</h4>
+                    <p>2100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Kaya" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="sange item-card" data-name="Sange" data-category="artifacts" data-group="upgraded-items" data-tags="damage str unique">
+                    <img src="img/items/sange.png" alt="Sange" width="120" height="90" loading="lazy">
+                    <h4>Sange</h4>
+                    <p>2100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Sange" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="yasha item-card" data-name="Yasha" data-category="artifacts" data-group="upgraded-items" data-tags="agi attack_speed move_speed">
+                    <img src="img/items/yasha.png" alt="Yasha" width="120" height="90" loading="lazy">
+                    <h4>Yasha</h4>
+                    <p>2100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Yasha" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="phylactery item-card" data-name="Phylactery" data-category="artifacts" data-group="upgraded-items" data-tags="hard_to_tag">
+                    <img src="img/items/phylactery.png" alt="Phylactery" width="120" height="90" loading="lazy">
+                    <h4>Phylactery</h4>
+                    <p>2600 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Phylactery" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="diffusal-blade item-card" data-name="Diffusal Blade" data-category="artifacts" data-group="upgraded-items" data-tags="agi int unique hard_to_tag">
+                    <img src="img/items/diffusal_blade.png" alt="Diffusal Blade" width="120" height="90" loading="lazy">
+                    <h4>Diffusal Blade</h4>
+                    <p>2500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Diffusal_Blade" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="echo-sabre item-card" data-name="Echo Sabre" data-category="artifacts" data-group="upgraded-items" data-tags="attack_speed damage regen_mana damage hard_to_tag farming dps">
+                    <img src="img/items/echo_sabre.png" alt="Echo Sabre" width="120" height="90" loading="lazy">
+                    <h4>Echo Sabre</h4>
+                    <p>2700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Echo_Sabre" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mage-slayer item-card" data-name="Mage Slayer" data-category="artifacts" data-group="upgraded-items" data-tags="hard_to_tag dps magic_resist">
+                    <img src="img/items/mage_slayer.png" alt="Mage Slayer" width="120" height="90" loading="lazy">
+                    <h4>Mage Slayer</h4>
+                    <p>3100 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mage_Slayer" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="maelstrom item-card" data-name="Maelstrom" data-category="artifacts" data-group="upgraded-items" data-tags="damage attack_speed unique farming dps">
+                    <img src="img/items/maelstrom.png" alt="Maelstrom" width="120" height="90" loading="lazy">
+                    <h4>Maelstrom</h4>
+                    <p>2950 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Maelstrom" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="heavens-halberd item-card" data-name="Heaven's Halberd" data-category="artifacts" data-group="upgraded-items" data-tags="regen_health save teamfight tank">
+                    <img src="img/items/heavens_halberd.png" alt="Heaven's Halberd" width="120" height="90" loading="lazy">
+                    <h4>Heaven's Halberd</h4>
+                    <p>3300 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Heaven's_Halberd" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="yasha-and-kaya item-card" data-name="Yasha and Kaya" data-category="artifacts" data-group="upgraded-items" data-tags="damage str agi attack_speed unique dps magic_dmg">
+                    <img src="img/items/yasha_and_kaya.png" alt="Yasha and Kaya" width="120" height="90" loading="lazy">
+                    <h4>Yasha and Kaya</h4>
+                    <p>4200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Yasha_and_Kaya" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="kaya-and-sange item-card" data-name="Kaya and Sange" data-category="artifacts" data-group="upgraded-items" data-tags="damage str agi unique magic_dmg">
+                    <img src="img/items/kaya_and_sange.png" alt="Kaya and Sange" width="120" height="90" loading="lazy">
+                    <h4>Kaya and Sange</h4>
+                    <p>4200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Kaya_and_Sange" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="sange-and-yasha item-card" data-name="Sange and Yasha" data-category="artifacts" data-group="upgraded-items" data-tags="damage str agi attack_speed unique dps">
+                    <img src="img/items/sange_and_yasha.png" alt="Sange and Yasha" width="120" height="90" loading="lazy">
+                    <h4>Sange and Yasha</h4>
+                    <p>4200 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Sange_and_Yasha" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="harpoon item-card" data-name="Harpoon" data-category="artifacts" data-group="upgraded-items" data-tags="">
+                    <img src="img/items/harpoon.png" alt="Harpoon" width="120" height="90" loading="lazy">
+                    <h4>Harpoon</h4>
+                    <p>4700 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Harpoon" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="satanic item-card" data-name="Satanic" data-category="artifacts" data-group="upgraded-items" data-tags="damage str armor unique hard_to_tag dps">
+                    <img src="img/items/satanic.png" alt="Satanic" width="120" height="90" loading="lazy">
+                    <h4>Satanic</h4>
+                    <p>5050 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Satanic" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="eye-of-skadi item-card" data-name="Eye of Skadi" data-category="artifacts" data-group="upgraded-items" data-tags="agi str int hard_to_tag mana_pool health_pool unique tank">
+                    <img src="img/items/skadi.png" alt="Eye of Skadi" width="120" height="90" loading="lazy">
+                    <h4>Eye of Skadi</h4>
+                    <p>5900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Eye_of_Skadi" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mjollnir item-card" data-name="Mjollnir" data-category="artifacts" data-group="upgraded-items" data-tags="damage attack_speed unique farming dps">
+                    <img src="img/items/mjollnir.png" alt="Mjollnir" width="120" height="90" loading="lazy">
+                    <h4>Mjollnir</h4>
+                    <p>5500 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Mjollnir" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="arcane-blink item-card" data-name="Arcane Blink" data-category="artifacts" data-group="upgraded-items" data-tags="teleport mobility escape magic_dmg">
+                    <img src="img/items/arcane_blink.png" alt="Arcane Blink" width="120" height="90" loading="lazy">
+                    <h4>Arcane Blink</h4>
+                    <p>6800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Arcane_Blink" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="overwhelming-blink item-card" data-name="Overwhelming Blink" data-category="artifacts" data-group="upgraded-items" data-tags="teleport mobility escape">
+                    <img src="img/items/overwhelming_blink.png" alt="Overwhelming Blink" width="120" height="90" loading="lazy">
+                    <h4>Overwhelming Blink</h4>
+                    <p>6800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Overwhelming_Blink" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="swift-blink item-card" data-name="Swift Blink" data-category="artifacts" data-group="upgraded-items" data-tags="teleport mobility escape">
+                    <img src="img/items/swift_blink.png" alt="Swift Blink" width="120" height="90" loading="lazy">
+                    <h4>Swift Blink</h4>
+                    <p>6800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Swift_Blink" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="crellas-crozier item-card" data-name="Crella's Crozier" data-category="artifacts" data-group="upgraded-items" data-tags="int agi str hard_to_tag escape">
+                    <img src="img/items/crellas_crozier.png" alt="Crella's Crozier" width="120" height="90" loading="lazy">
+                    <h4>Crella's Crozier</h4>
+                    <p>4800 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Crella's_Crozier" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="hydras-breath item-card" data-name="Hydra's Breath" data-category="artifacts" data-group="upgraded-items" data-tags="agi damage attack_speed hard_to_tag">
+                    <img src="img/items/hydras_breath.png" alt="Hydra's Breath" width="120" height="90" loading="lazy">
+                    <h4>Hydra's Breath</h4>
+                    <p>5900 <img src="img/gold.svg" alt="Gold" width="18" height="18"></p>
+                    <a href="https://liquipedia.net/dota2/Hydra's_Breath" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+        </section>
+        <section class="neutral-items item-group">
+            <h2>Neutral Items</h2>
+            <section class="tier-1 item-category">
+                <h3>Tier 1</h3>
+                <div class="occult-bracelet item-card" data-name="Occult Bracelet" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/occult_bracelet.png" alt="Occult Bracelet" width="120" height="90" loading="lazy">
+                    <h4>Occult Bracelet</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Occult_Bracelet" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="kobold-cup item-card" data-name="Kobold Cup" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/kobold_cup.png" alt="Kobold Cup" width="120" height="90" loading="lazy">
+                    <h4>Kobold Cup</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Kobold_Cup" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="chipped-vest item-card" data-name="Chipped Vest" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/chipped_vest.png" alt="Chipped Vest" width="120" height="90" loading="lazy">
+                    <h4>Chipped Vest</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Chipped_Vest" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="pollywog-charm item-card" data-name="Pollywog Charm" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/polliwog_charm.png" alt="Pollywog Charm" width="120" height="90" loading="lazy">
+                    <h4>Pollywog Charm</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Pollywog_Charm" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dormant-curio item-card" data-name="Dormant Curio" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/dormant_curio.png" alt="Dormant Curio" width="120" height="90" loading="lazy">
+                    <h4>Dormant Curio</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Dormant_Curio" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="duelist-gloves item-card" data-name="Duelist Gloves" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/duelist_gloves.png" alt="Duelist Gloves" width="120" height="90" loading="lazy">
+                    <h4>Duelist Gloves</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Duelist_Gloves" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="weighted-dice item-card" data-name="Weighted Dice" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/weighted_dice.png" alt="Weighted Dice" width="120" height="90" loading="lazy">
+                    <h4>Weighted Dice</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Weighted_Dice" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="ash-legion-shield item-card" data-name="Ash Legion Shield" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/ash_legion_shield.png" alt="Ash Legion Shield" width="120" height="90" loading="lazy">
+                    <h4>Ash Legion Shield</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Ash_Legion_Shield" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dagger-of-ristul item-card" data-name="Dagger of Ristul" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/dagger_of_ristul.png" alt="Dagger of Ristul" width="120" height="90" loading="lazy">
+                    <h4>Dagger of Ristul</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Dagger_of_Ristul" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="stonefeather-satchel item-card" data-name="Stonefeather Satchel" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/stonefeather_satchel.png" alt="Stonefeather Satchel" width="120" height="90" loading="lazy">
+                    <h4>Stonefeather Satchel</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Stonefeather_Satchel" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="possessed-mask item-card" data-name="Possessed Mask" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/possessed_mask.png" alt="Possessed Mask" width="120" height="90" loading="lazy">
+                    <h4>Possessed Mask</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Possessed_Mask" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="foragers-kit item-card" data-name="Forager's Kit" data-category="tier-1" data-group="neutral-items" data-tags="">
+                    <img src="img/items/foragers_kit.png" alt="Forager's Kit" width="120" height="90" loading="lazy">
+                    <h4>Forager's Kit</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Forager's_Kit" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="tier-2 item-category">
+                <h3>Tier 2</h3>
+                <div class="essence-ring item-card" data-name="Essence Ring" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/essence_ring.png" alt="Essence Ring" width="120" height="90" loading="lazy">
+                    <h4>Essence Ring</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Essence_Ring" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="mana-draught item-card" data-name="Mana Draught" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/mana_draught.png" alt="Mana Draught" width="120" height="90" loading="lazy">
+                    <h4>Mana Draught</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Mana_Draught" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="poor-mans-shield item-card" data-name="Poor Man's Shield" data-category="tier-2" data-group="neutral-items" data-tags="agi block">
+                    <img src="img/items/poor_mans_shield.png" alt="Poor Man's Shield" width="120" height="90" loading="lazy">
+                    <h4>Poor Man's Shield</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Poor_Man's_Shield" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="searing-signet item-card" data-name="Searing Signet" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/searing_signet.png" alt="Searing Signet" width="120" height="90" loading="lazy">
+                    <h4>Searing Signet</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Searing_Signet" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="tumblers-toy item-card" data-name="Tumbler's Toy" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/pogo_stick.png" alt="Tumbler's Toy" width="120" height="90" loading="lazy">
+                    <h4>Tumbler's Toy</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Tumbler's_Toy" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="defiant-shell item-card" data-name="Defiant Shell" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/defiant_shell.png" alt="Defiant Shell" width="120" height="90" loading="lazy">
+                    <h4>Defiant Shell</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Defiant_Shell" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="crippling-crossbow item-card" data-name="Crippling Crossbow" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/crippling_crossbow.png" alt="Crippling Crossbow" width="120" height="90" loading="lazy">
+                    <h4>Crippling Crossbow</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Crippling_Crossbow" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="medallion-of-courage item-card" data-name="Medallion of Courage" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/medallion_of_courage.png" alt="Medallion of Courage" width="120" height="90" loading="lazy">
+                    <h4>Medallion of Courage</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Medallion_of_Courage" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="seeds-of-serenity item-card" data-name="Seeds of Serenity" data-category="tier-2" data-group="neutral-items" data-tags="">
+                    <img src="img/items/seeds_of_serenity.png" alt="Seeds of Serenity" width="120" height="90" loading="lazy">
+                    <h4>Seeds of Serenity</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Seeds_of_Serenity" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="tier-3 item-category">
+                <h3>Tier 3</h3>
+                <div class="serrated-shiv item-card" data-name="Serrated Shiv" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/serrated_shiv.png" alt="Serrated Shiv" width="120" height="90" loading="lazy">
+                    <h4>Serrated Shiv</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Serrated_Shiv" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="gunpowder-gauntlet item-card" data-name="Gunpowder Gauntlet" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/gunpowder_gauntlets.png" alt="Gunpowder Gauntlet" width="120" height="90" loading="lazy">
+                    <h4>Gunpowder Gauntlet</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Gunpowder_Gauntlet" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="jidi-pollen-bag item-card" data-name="Jidi Pollen Bag" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/jidi_pollen_bag.png" alt="Jidi Pollen Bag" width="120" height="90" loading="lazy">
+                    <h4>Jidi Pollen Bag</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Jidi_Pollen_Bag" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="psychic-headband item-card" data-name="Psychic Headband" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/psychic_headband.png" alt="Psychic Headband" width="120" height="90" loading="lazy">
+                    <h4>Psychic Headband</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Psychic_Headband" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="unrelenting-eye item-card" data-name="Unrelenting Eye" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/unrelenting_eye.png" alt="Unrelenting Eye" width="120" height="90" loading="lazy">
+                    <h4>Unrelenting Eye</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Unrelenting_Eye" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="cloak-of-flames item-card" data-name="Cloak of Flames" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/cloak_of_flames.png" alt="Cloak of Flames" width="120" height="90" loading="lazy">
+                    <h4>Cloak of Flames</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Cloak_of_Flames" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="spellslinger item-card" data-name="Spellslinger" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/spellslinger.png" alt="Spellslinger" width="120" height="90" loading="lazy">
+                    <h4>Spellslinger</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Spellslinger" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="stormcrafter item-card" data-name="Stormcrafter" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/stormcrafter.png" alt="Stormcrafter" width="120" height="90" loading="lazy">
+                    <h4>Stormcrafter</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Stormcrafter" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="partisans-brand item-card" data-name="Partisan's Brand" data-category="tier-3" data-group="neutral-items" data-tags="">
+                    <img src="img/items/partisans_brand.png" alt="Partisan's Brand" width="120" height="90" loading="lazy">
+                    <h4>Partisan's Brand</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Partisan's_Brand" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="tier-4 item-category">
+                <h3>Tier 4</h3>
+                <div class="giants-maul item-card" data-name="Giant's Maul" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/giant_maul.png" alt="Giant's Maul" width="120" height="90" loading="lazy">
+                    <h4>Giant's Maul</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Giant's_Maul" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="rattlecage item-card" data-name="Rattlecage" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/rattlecage.png" alt="Rattlecage" width="120" height="90" loading="lazy">
+                    <h4>Rattlecage</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Rattlecage" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="idol-of-screeauk item-card" data-name="Idol of Scree'auk" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/idol_of_screeauk.png" alt="Idol of Scree'auk" width="120" height="90" loading="lazy">
+                    <h4>Idol of Scree'auk</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Idol_of_Scree'auk" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="flayers-bota item-card" data-name="Flayer's Bota" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/flayers_bota.png" alt="Flayer's Bota" width="120" height="90" loading="lazy">
+                    <h4>Flayer's Bota</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Flayer's_Bota" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="metamorphic-mandible item-card" data-name="Metamorphic Mandible" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/metamorphic_mandible.png" alt="Metamorphic Mandible" width="120" height="90" loading="lazy">
+                    <h4>Metamorphic Mandible</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Metamorphic_Mandible" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dandelion-amulet item-card" data-name="Dandelion Amulet" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/dandelion_amulet.png" alt="Dandelion Amulet" width="120" height="90" loading="lazy">
+                    <h4>Dandelion Amulet</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Dandelion_Amulet" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="enchanters-bauble item-card" data-name="Enchanter's Bauble" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/enchanters_bauble.png" alt="Enchanter's Bauble" width="120" height="90" loading="lazy">
+                    <h4>Enchanter's Bauble</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Enchanter's_Bauble" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="prophets-pendulum item-card" data-name="Prophet's Pendulum" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/prophets_pendulum.png" alt="Prophet's Pendulum" width="120" height="90" loading="lazy">
+                    <h4>Prophet's Pendulum</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Prophet's_Pendulum" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="conjurers-catalyst item-card" data-name="Conjurer's Catalyst" data-category="tier-4" data-group="neutral-items" data-tags="">
+                    <img src="img/items/conjurers_catalyst.png" alt="Conjurer's Catalyst" width="120" height="90" loading="lazy">
+                    <h4>Conjurer's Catalyst</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Conjurer's_Catalyst" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="tier-5 item-category">
+                <h3>Tier 5</h3>
+                <div class="stygian-desolator item-card" data-name="Stygian Desolator" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/desolator_2.png" alt="Stygian Desolator" width="120" height="90" loading="lazy">
+                    <h4>Stygian Desolator</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Stygian_Desolator" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="fallen-sky item-card" data-name="Fallen Sky" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/fallen_sky.png" alt="Fallen Sky" width="120" height="90" loading="lazy">
+                    <h4>Fallen Sky</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Fallen_Sky" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="book-of-the-dead item-card" data-name="Book of the Dead" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/demonicon.png" alt="Book of the Dead" width="120" height="90" loading="lazy">
+                    <h4>Book of the Dead</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Book_of_the_Dead" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="minotaur-horn item-card" data-name="Minotaur Horn" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/minotaur_horn.png" alt="Minotaur Horn" width="120" height="90" loading="lazy">
+                    <h4>Minotaur Horn</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Minotaur_Horn" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="spider-legs item-card" data-name="Spider Legs" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/spider_legs.png" alt="Spider Legs" width="120" height="90" loading="lazy">
+                    <h4>Spider Legs</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Spider_Legs" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="riftshadow-prism item-card" data-name="Riftshadow Prism" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/riftshadow_prism.png" alt="Riftshadow Prism" width="120" height="90" loading="lazy">
+                    <h4>Riftshadow Prism</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Riftshadow_Prism" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="dezun-bloodrite item-card" data-name="Dezun Bloodrite" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/dezun_bloodrite.png" alt="Dezun Bloodrite" width="120" height="90" loading="lazy">
+                    <h4>Dezun Bloodrite</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Dezun_Bloodrite" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="divine-regalia item-card" data-name="Divine Regalia" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/divine_regalia.png" alt="Divine Regalia" width="120" height="90" loading="lazy">
+                    <h4>Divine Regalia</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Divine_Regalia" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="harmonizer item-card" data-name="Harmonizer" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/harmonizer.png" alt="Harmonizer" width="120" height="90" loading="lazy">
+                    <h4>Harmonizer</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Harmonizer" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="witchbane item-card" data-name="Witchbane" data-category="tier-5" data-group="neutral-items" data-tags="">
+                    <img src="img/items/heavy_blade.png" alt="Witchbane" width="120" height="90" loading="lazy">
+                    <h4>Witchbane</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Witchbane" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+        </section>
+        <section class="other-items item-group">
+            <h2>Other Items</h2>
+            <section class="boss-rewards item-category">
+                <h3>Boss Rewards</h3>
+                <div class="aegis-of-the-immortal item-card" data-name="Aegis of the Immortal" data-category="boss-rewards" data-group="other-items" data-tags="">
+                    <img src="img/items/aegis.png" alt="Aegis of the Immortal" width="120" height="90" loading="lazy">
+                    <h4>Aegis of the Immortal</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Aegis_of_the_Immortal" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="cheese item-card" data-name="Cheese" data-category="boss-rewards" data-group="other-items" data-tags="">
+                    <img src="img/items/cheese.png" alt="Cheese" width="120" height="90" loading="lazy">
+                    <h4>Cheese</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Cheese" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="refresher-shard item-card" data-name="Refresher Shard" data-category="boss-rewards" data-group="other-items" data-tags="">
+                    <img src="img/items/refresher_shard.png" alt="Refresher Shard" width="120" height="90" loading="lazy">
+                    <h4>Refresher Shard</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Refresher_Shard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aghanims-blessing-roshan item-card" data-name="Aghanim's Blessing - Roshan" data-category="boss-rewards" data-group="other-items" data-tags="">
+                    <img src="img/items/ultimate_scepter_roshan.png" alt="Aghanim's Blessing - Roshan" width="120" height="90" loading="lazy">
+                    <h4>Aghanim's Blessing - Roshan</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Aghanim's_Blessing" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="aghanims-shard-consumable item-card" data-name="Aghanim's Shard - Consumable" data-category="boss-rewards" data-group="other-items" data-tags="">
+                    <img src="img/items/aghanims_shard_roshan.png" alt="Aghanim's Shard - Consumable" width="120" height="90" loading="lazy">
+                    <h4>Aghanim's Shard - Consumable</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Aghanim's_Shard" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="roshans-banner item-card" data-name="Roshan's Banner" data-category="boss-rewards" data-group="other-items" data-tags="">
+                    <img src="img/items/roshans_banner.png" alt="Roshan's Banner" width="120" height="90" loading="lazy">
+                    <h4>Roshan's Banner</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Roshan's_Banner" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+            <section class="collectibles item-category">
+                <h3>Collectibles</h3>
+                <div class="block-of-cheese item-card" data-name="Block of Cheese" data-category="collectibles" data-group="other-items" data-tags="">
+                    <img src="img/items/royale_with_cheese.png" alt="Block of Cheese" width="120" height="90" loading="lazy">
+                    <h4>Block of Cheese</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Block_of_Cheese" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="healing-lotus item-card" data-name="Healing Lotus" data-category="collectibles" data-group="other-items" data-tags="consumable">
+                    <img src="img/items/famango.png" alt="Healing Lotus" width="120" height="90" loading="lazy">
+                    <h4>Healing Lotus</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Healing_Lotus" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="great-healing-lotus item-card" data-name="Great Healing Lotus" data-category="collectibles" data-group="other-items" data-tags="consumable">
+                    <img src="img/items/great_famango.png" alt="Great Healing Lotus" width="120" height="90" loading="lazy">
+                    <h4>Great Healing Lotus</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Great_Healing_Lotus" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+                <div class="greater-healing-lotus item-card" data-name="Greater Healing Lotus" data-category="collectibles" data-group="other-items" data-tags="consumable">
+                    <img src="img/items/greater_famango.png" alt="Greater Healing Lotus" width="120" height="90" loading="lazy">
+                    <h4>Greater Healing Lotus</h4>
+                    <p>Not sold in shops</p>
+                    <a href="https://liquipedia.net/dota2/Greater_Healing_Lotus" class="btn" target="_blank" rel="noopener noreferrer">More</a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Study project. Dota 2 item images belong to Valve.</p>
+    </footer>
+</body>
+</html>

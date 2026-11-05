@@ -1,0 +1,12 @@
+/* Только технические правила. Дизайн и сетку можно добавить самостоятельно. */
+[hidden] {
+    display: none !important;
+}
+
+.item-card > img {
+    object-fit: contain;
+}
+
+.item-card p img {
+    vertical-align: middle;
+}

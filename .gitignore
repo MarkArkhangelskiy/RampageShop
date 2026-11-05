@@ -1,0 +1,10 @@
+# Temporary downloads, screenshots and generated QA pages
+work/qa.html
+work/items-english.txt
+work/game-items.txt
+work/neutral-items.txt
+work/items.json
+work/item_colors.json
+work/*.log
+Thumbs.db
+.DS_Store

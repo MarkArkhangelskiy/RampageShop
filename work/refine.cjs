@@ -1,0 +1,10 @@
+const fs=require('fs');
+const p='work/build-catalog.cjs';
+let s=fs.readFileSync(p,'utf8');
+s=s.replace('const name = item.dname;', `const name = key.startsWith('dagon_') ? item.dname + ' ' + key.split('_')[1] : item.dname;`);
+s=s.replace("const wiki = 'https://liquipedia.net/dota2/' + encodeURIComponent(name.replaceAll(' ', '_').replace(/ Recipe$/, ''));", `const wikiName = key.startsWith('dagon') ? 'Dagon' : key === 'travel_boots_2' ? 'Boots of Travel' : key === 'ultimate_scepter_roshan' ? "Aghanim's Blessing" : key === 'aghanims_shard_roshan' ? "Aghanim's Shard" : item.dname;
+    const wiki = 'https://liquipedia.net/dota2/' + encodeURIComponent(wikiName.replaceAll(' ', '_'));`);
+s=s.replace("fs.copyFileSync('index.html', 'work/index.original.html');", "if (!fs.existsSync('work/index.original.html')) fs.copyFileSync('index.html', 'work/index.original.html');");
+s=s.replace('<h3>${escape(name)}</h3>', '<h4>${escape(name)}</h4>');
+s=s.replace('<h2>${title}</h2>', '<h3>${title}</h3>');
+fs.writeFileSync(p,s);

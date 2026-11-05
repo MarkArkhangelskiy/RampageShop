@@ -1,0 +1,1 @@
+const fs=require('fs');const p='work/build-catalog.cjs';let s=fs.readFileSync(p,'utf8').replace('sheepstick gungir wind_waker essence_distiller','sheepstick gungir wind_waker essence_distiller devastator');s=s.replace("entry?.ItemPurchasable === '0'", "(entry?.ItemPurchasable === '0' || entry?.IsObsolete === '1')");fs.writeFileSync(p,s);

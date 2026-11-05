@@ -1,0 +1,1 @@
+const fs=require('fs'),crypto=require('crypto'),assert=require('assert/strict');const jobs=require('./image-jobs.json');const hashes=jobs.map(j=>crypto.createHash('sha256').update(fs.readFileSync(j.file)).digest('hex'));assert.equal(new Set(hashes).size,246);console.log('246 unique generated images; no reused files.');
