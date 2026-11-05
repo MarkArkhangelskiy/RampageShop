@@ -135,3 +135,6 @@ fs.writeFileSync('img/gold.svg', '<svg xmlns="http://www.w3.org/2000/svg" viewBo
 fs.writeFileSync('work/catalog.json', JSON.stringify({groups,count,downloads},null,2));
 console.log('Cards: ' + count + '; Images to download: ' + downloads.length);
 
+
+// После сборки возвращаем русские подписи и поисковые синонимы.
+require('./localize-catalog.cjs');

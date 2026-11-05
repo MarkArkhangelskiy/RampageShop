@@ -1,4 +1,4 @@
-// Находим поля и все карточки, которые уже находятся в HTML.
+// Находим поля и карточки, которые уже находятся в HTML.
 const searchForm = document.querySelector('.search');
 const searchInput = document.querySelector('#search-input');
 const categoryFilter = document.querySelector('#category-filter');
@@ -9,44 +9,109 @@ const groups = document.querySelectorAll('.item-group');
 const resultsCount = document.querySelector('#results-count');
 const noResults = document.querySelector('#no-results');
 
+// Регистр, ё/е, лишние пробелы и знаки препинания не мешают поиску.
+function normalizeText(text) {
+    return text.toLowerCase().replaceAll('ё', 'е')
+        .replace(/[^a-zа-я0-9]+/g, ' ').trim();
+}
+
+// Буквы стоят в порядке одинаковых клавиш русской и английской раскладки.
+function changeLayout(text, from, to) {
+    return text.split('').map(function (letter) {
+        const index = from.indexOf(letter);
+        return index === -1 ? letter : to[index];
+    }).join('');
+}
+
+function getSearchVariants(text) {
+    const english = "`qwertyuiop[]asdfghjkl;'zxcvbnm,.";
+    const russian = 'ёйцукенгшщзхъфывапролджэячсмитьбю';
+    const query = text.toLowerCase();
+
+    // Проверяем исходный ввод и обе возможные ошибки раскладки.
+    return [query, changeLayout(query, english, russian), changeLayout(query, russian, english)]
+        .filter(function (variant, index) {
+            // Исправление не должно обрезать буквы: бкб → ,r, не превращаем в r.
+            return index === 0 || /^[a-zа-яё0-9]+(?:['-][a-zа-яё0-9]+)*$/.test(variant);
+        }).map(normalizeText).filter(function (variant) {
+            return variant.length > 0;
+        });
+}
+
+function getCardSearchText(card) {
+    return normalizeText(card.dataset.name + ' ' + (card.dataset.nameRu || '')
+        + ' ' + (card.dataset.aliases || ''));
+}
+
+function getSearchWords(query) {
+    if (query.trim() === '') {
+        return [];
+    }
+
+    const names = Array.from(cards, getCardSearchText);
+    const knownWords = names.join(' ').split(' ');
+
+    return query.trim().split(/\s+/).map(function (word) {
+        const variants = getSearchVariants(word);
+        // Сначала ищем известное слово: bkb не должно превращаться в «или».
+        const exactWord = variants.find(function (variant) {
+            return knownWords.includes(variant);
+        });
+        if (exactWord) {
+            return exactWord;
+        }
+
+        // Если введена часть названия, выбираем первый подходящий вариант.
+        return variants.find(function (variant) {
+            return names.some(function (name) {
+                return name.includes(variant);
+            });
+        }) || variants[0] || null;
+    });
+}
+
+function matchesSearch(card, words) {
+    const names = getCardSearchText(card);
+    return words.every(function (word) {
+        return word !== null && word.split(' ').every(function (part) {
+            return names.includes(part);
+        });
+    });
+}
+
 function filterItems() {
-    // Пробелы по краям и регистр не влияют на поиск.
-    const searchText = searchInput.value.trim().toLowerCase();
+    const searchWords = getSearchWords(searchInput.value);
     const selectedCategory = categoryFilter.value;
     const selectedTag = tagFilter.value;
     let count = 0;
 
     cards.forEach(function (card) {
-        const name = card.dataset.name.toLowerCase();
         const tags = card.dataset.tags.split(' ');
-        const matchesName = name.includes(searchText);
+        const matchesName = matchesSearch(card, searchWords);
         const matchesCategory = selectedCategory === 'all'
             || card.dataset.category === selectedCategory
             || card.dataset.group === selectedCategory;
         const matchesTag = selectedTag === 'all' || tags.includes(selectedTag);
 
-        // Карточка показывается, только если совпали все три условия.
         card.hidden = !(matchesName && matchesCategory && matchesTag);
-
         if (!card.hidden) {
             count++;
         }
     });
 
-    // Скрываем разделы, в которых не осталось подходящих карточек.
     categories.forEach(function (category) {
         category.hidden = category.querySelector('.item-card:not([hidden])') === null;
     });
-
     groups.forEach(function (group) {
         group.hidden = group.querySelector('.item-card:not([hidden])') === null;
     });
 
-    resultsCount.textContent = 'Items found: ' + count;
+    resultsCount.textContent = 'Найдено предметов: ' + count;
     noResults.hidden = count !== 0;
 }
 
-// input срабатывает при каждом изменении текста, change — при выборе фильтра.
+// При открытии страницы начинаем с пустого поиска и всех предметов/тегов.
+searchForm.reset();
 searchInput.addEventListener('input', filterItems);
 categoryFilter.addEventListener('change', filterItems);
 tagFilter.addEventListener('change', filterItems);

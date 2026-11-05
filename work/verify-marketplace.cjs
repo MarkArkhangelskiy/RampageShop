@@ -3,7 +3,7 @@ const jobs=JSON.parse(fs.readFileSync('work/image-jobs.json','utf8'));
 const prices=require('./marketplace-prices.json');const html=fs.readFileSync('index.html','utf8');
 assert.equal(jobs.length,244);assert.equal(jobs.filter(j=>j.category==='boss-rewards').length,4);assert(!jobs.some(j=>['ultimate_scepter_roshan','aghanims_shard_roshan'].includes(j.key)));for(const key of ['aegis','cheese','refresher_shard','roshans_banner','ultimate_scepter_2','aghanims_shard'])assert(jobs.some(j=>j.key===key));assert.equal(new Set(jobs.map(j=>j.name)).size,244);assert.equal(jobs.filter(j=>j.status==='complete').length,244);
 assert.equal((html.match(/src="img\/marketplace\//g)||[]).length,244);
-assert.equal((html.match(/Fictional hero-to-hero asking price/g)||[]).length,57);
+assert.equal((html.match(/Условная цена для торговли между героями/g)||[]).length,57);
 assert.ok(!html.includes('Not sold in shops'));
 assert.equal(Object.keys(prices).length,57);
 const unique=new Set();let bytes=0;

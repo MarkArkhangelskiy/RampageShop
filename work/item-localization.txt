@@ -1,0 +1,244 @@
+ward_observer|Наблюдательный вард|обс обсервер желтый вард жёлтый вард observer ward
+blood_grenade|Кровавая граната|блад граната бладграната
+clarity|Кларити|кларетка мана бутылочка маны
+ward_sentry|Сторожевой вард|сентри синий вард сентряк
+smoke_of_deceit|Дым обмана|смок смоки smoke
+ enchanted_mango|Зачарованное манго|манго mango
+faerie_fire|Волшебный огонь|фейри фаер фаерка
+ dust|Пыль явления|даст дасты пыль dust
+ tango|Танго|тангус тангусы деревья
+flask|Лечебная мазь|фласка хил salve
+ tpscroll|Свиток телепортации|тп телепорт тпшка tp scroll
+bottle|Бутылка|ботл боттл бутылка bottle
+aghanims_shard|Осколок Аганима|аганим шард aghanim shard
+branches|Железная ветка|ветка веточка бранч branch
+ gauntlets|Рукавицы силы|перчатки силы гаунтлеты
+mantle|Мантия интеллекта|мантл мантия
+slippers|Туфли ловкости|тапки слиперы slippers
+circlet|Венец|цирклет цирк circlet
+boots_of_elves|Эльфийская повязка|банд бенд эльвенскин band
+belt_of_strength|Пояс силы|белт ремень
+crown|Корона|краун crown
+robe|Роба мага|роба robe
+blade_of_alacrity|Клинок расторопности|блейд ловкость alacrity
+ diadem|Диадема|диадем diadem
+ogre_axe|Топор огра|огр акс огр топор ogre axe
+staff_of_wizardry|Посох волшебства|стафф staff
+quelling_blade|Топорик|квеллинг топор quelling blade
+ring_of_protection|Кольцо защиты|ринг армор защита
+infused_raindrop|Зачарованные капли|капли рейндроп раиндроп raindrops
+orb_of_venom|Сфера яда|орб веном ов venom
+blight_stone|Сфера порчи|блайт стоун blight stone
+orb_of_frost|Сфера мороза|орб фрост frost
+blades_of_attack|Клинки атаки|блейдс blades
+ gloves|Перчатки скорости|гловы гловсы gloves
+chainmail|Кольчуга|чейнмейл chainmail
+splintmail|Пластинчатая кольчуга|сплинтмейл splintmail
+javelin|Дротик|джавелин джавелин javelin
+helm_of_iron_will|Шлем железной воли|хелм шлем helm
+blitz_knuckles|Молниеносный кастет|блитц кастет blitz
+broadsword|Палаш|бродсворд broadsword
+claymore|Клеймор|клеймор claymore
+mithril_hammer|Мифриловый молот|митрил хаммер mithril hammer
+ring_of_regen|Кольцо регенерации|кольцо регена ринг реген
+sobi_mask|Маска мудреца|соби маск собимаска sage mask
+magic_stick|Волшебная палочка|стик стики stick
+fluffy_hat|Пушистая шапка|флаффи шапка hat
+wind_lace|Ветряное кружево|винд лейс шнурок wind lace
+boots|Сапоги скорости|ботинок сапог ботинки boots
+ring_of_health|Кольцо здоровья|кольцо регена рох ринг хелс roh
+void_stone|Камень пустоты|войдик войд стоун void stone
+voodoo_mask|Маска вуду|вуду маска voodoo mask
+shawl|Шаль|шол shawl
+cloak|Плащ|клоак cloak
+ gem|Самоцвет истинного зрения|гем гемчик gem
+lifesteal|Маска смерти|морбид маска вампиризм morbid mask
+shadow_amulet|Теневой амулет|амулет шадоу амулет amulet
+ ghost|Призрачный скипетр|гост гостик ghost
+blink|Кинжал скачка|блинк даггер blink dagger
+chasm_stone|Камень бездны|часм chasm
+energy_booster|Усилитель энергии|энерджи бустер синий бустер
+vitality_booster|Усилитель жизненной силы|виталити бустер красный бустер
+point_booster|Точечный усилитель|поинт бустер розовый бустер
+ talisman_of_evasion|Талисман уклонения|талик эвейжен талисман
+platemail|Латы|плейт плейтмейл platemail
+ring_of_tarrasque|Кольцо Тараски|тараска ринг тараска
+ tiara_of_selemene|Тиара Селемине|тиара селемена
+hyperstone|Гиперкамень|гиперстоун гипер hyperstone
+ demon_edge|Демонический клинок|демон эдж demon edge
+eagle|Песнь орла|иглсонг игл eagle eaglesong
+mystic_staff|Мистический посох|мистик стаф mystic staff
+ reaver|Секира|ривер reaver
+ultimate_orb|Предельная сфера|ультимейт орб ultimate orb
+relic|Священная реликвия|релика реликт sacred relic
+bracer|Брейсер|брасер bracer
+null_talisman|Нулевой талисман|нулл нули null nullik
+wraith_band|Призрачное кольцо|врейс вб wraith band wb
+magic_wand|Волшебный жезл|ванд стики большие стики magic wand
+soul_ring|Кольцо души|соулринг соул ринг soul ring
+orb_of_corrosion|Сфера коррозии|коррозия орб коррозии corrosion
+falcon_blade|Соколиный клинок|фалкон falcon
+pers|Упорство|персик перс perseverance
+power_treads|Силовые ботинки|пт птшка птшки pt power treads
+phase_boots|Фазовые ботинки|фазы фазики phase boots
+oblivion_staff|Посох забвения|обливион oblivion
+mask_of_madness|Маска безумия|мом момка mom mask madness
+hand_of_midas|Рука Мидаса|мидас midas
+travel_boots|Сапоги путешественника|тревела тревелы травела травелы travel boots bot
+travel_boots_2|Сапоги путешественника 2|тревела тревелы травела травелы travel boots bot
+moon_shard|Лунный осколок|муншард мун шард moon shard
+specialists_array|Арсенал специалиста|специалист аррей array
+buckler|Баклер|щит buckler
+headdress|Головной убор|хеддрес хедрес headdress
+ring_of_basilius|Кольцо Базилиуса|базилка басилка базилиус basilius
+urn_of_shadows|Урна теней|урна урночка urn
+tranquil_boots|Безмятежные сапоги|транквилы транквилы транквила tranquil
+arcane_boots|Магические сапоги|арканы арканки arcane boots
+pavise|Павеза|павиз павис pavise
+ancient_janggo|Барабан выносливости|барабаны драм drums drum
+mekansm|Меканзм|мека мекашка mek mekansm
+vladmir|Подношение Владимира|владмир владимир владик vladmir
+holy_locket|Святой медальон|холи локет holy locket
+spirit_vessel|Сосуд духа|вессел весел vessel
+pipe|Трубка прозрения|пайп пипа pipe
+ guardian_greaves|Сапоги стража|гривсы гвардиан гварды greaves
+boots_of_bearing|Сапоги стойкости|беринги bearing
+solar_crest|Солнечный герб|солар соларка solar crest
+veil_of_discord|Вуаль раздора|вейл вуаль veil
+ glimmer_cape|Мерцающий плащ|глиммер глимер glimmer
+force_staff|Посох силы|форс форсик форстаф force staff
+ aether_lens|Эфирная линза|линза аетер aether lens
+witch_blade|Ведьмин клинок|вичблейд вич блейд witch blade
+cyclone|Скипетр божественности Юла|еул еулс юла юл ветра eul cyclone
+rod_of_atos|Жезл Атоса|атос atos
+ dagon|Дагон|дагон dagon
+ dagon_2|Дагон 2|дагон dagon
+ dagon_3|Дагон 3|дагон dagon
+ dagon_4|Дагон 4|дагон dagon
+ dagon_5|Дагон 5|дагон dagon
+orchid|Зловещая орхидея|орчид оркид orchid
+ultimate_scepter|Скипетр Аганима|аганим аганимчик aghanim scepter
+ultimate_scepter_2|Благословение Аганима|аганим блессинг съеденный аганим aghanim blessing
+refresher|Сфера обновления|рефрешер рефреш refresher
+ octarine_core|Октариновое ядро|октарин octarine
+sheepstick|Коса Вайза|хекс шипстик коса hex sheepstick scythe
+ gungir|Глейпнир|глейпнир глипнир gleipnir
+wind_waker|Ветроход|виндвейкер винд вейкер wind waker
+ essence_distiller|Перегонщик эссенции|эссенс дистиллер distiller
+ devastator|Паразма|парасма parasma
+vanguard|Авангард|вангард вг vg vanguard
+blade_mail|Кольчуга отражения|бм блейдмейл обратка bm blade mail
+ aeon_disk|Диск Эона|эон аеон aeon
+ soul_booster|Усилитель души|соул бустер soul booster
+ crimson_guard|Багровый страж|кримсон crimson
+lotus_orb|Сфера лотоса|лотус лотос lotus orb
+black_king_bar|Посох Чёрного короля|бкб бкбшка bkb black king bar
+bloodstone|Кровавый камень|бладстоун блад bloodstone
+hurricane_pike|Ураганная пика|пика хуррикан hurricane pike
+manta|Манта|манта manta
+sphere|Сфера Линкена|линка линкен linken sphere
+ assault|Штурмовая кираса|кираса ассолт assault cuirass ac
+shivas_guard|Страж Шивы|шива шивы shiva
+heart|Сердце Тараски|тараска тарасик heart tarrasque
+helm_of_the_dominator|Шлем подчинителя|доминатор домик dominator
+helm_of_the_overlord|Шлем владыки|оверлорд большой доминатор overlord
+consecrated_wraps|Освящённые обмотки|обмотки врапс wraps
+lesser_crit|Кристалис|кристалис криты малые криты crystalys
+armlet|Нарукавник Мордиггиана|армлет armlet
+meteor_hammer|Метеоритный молот|метеор мем хаммер meteor hammer
+basher|Череполом|башер basher
+invis_sword|Теневой клинок|шб лотар шадоу блейд shadow blade sb lothar
+ desolator|Дезолятор|дезоль дезол дезолятор desolator deso
+bfury|Боевая ярость|бф бфурик батлфури battle fury bf bfury
+nullifier|Нуллификатор|нулифаер нуллифаер nullifier
+monkey_king_bar|Посох Короля обезьян|мкб мкбшка mkb monkey king bar
+radiance|Сияние|радик радианс radiance radi
+revenants_brooch|Брошь призрака|брошь брошка ревенант brooch
+ greater_crit|Дедалус|даедалус дедалус криты большие криты daedalus
+ ethereal_blade|Эфирный клинок|этериал эзериал еблейд ethereal blade eblade
+angels_demise|Кханда|ханда кханда khanda
+butterfly|Бабочка|бабочка баттерфляй butterfly
+silver_edge|Серебряная грань|сильвер сильверэдж silver edge
+abyssal_blade|Клинок бездны|абиссал абисал abyssal
+rapier|Божественная рапира|рапира рапирка rapier
+ disperser|Рассеиватель|дисперсер дисперс disperser
+ bloodthorn|Кровавый шип|блудторн бладторн bloodthorn
+ dragon_lance|Копьё дракона|драгон ленс драгонленс dragon lance
+kaya|Кая|кая kaya
+sange|Саша|санж саша sange
+ yasha|Яша|яша yasha
+ phylactery|Филактерия|филактерия фила phylactery
+ diffusal_blade|Рассеивающий клинок|диффуза дифуза диффуз диффузал diffusal
+ echo_sabre|Эхо-сабля|сабля эхо echo sabre
+mage_slayer|Убийца магов|мейдж слеер магслейер mage slayer
+maelstrom|Водоворот|маелстром мейлстром молнии малые молнии maelstrom
+heavens_halberd|Небесная алебарда|алебарда халберд halberd
+ yasha_and_kaya|Яша и Кая|яша кая yasha kaya
+ kaya_and_sange|Кая и Саша|кая саша санж kaya sange
+ sange_and_yasha|Саша и Яша|сия саша яша саша-яша sny sange yasha
+harpoon|Гарпун|гарпун harpoon
+satanic|Сатаник|сатаник satanic
+skadi|Око Скади|скади skadi
+mjollnir|Мьёльнир|мьелнир мьёльнир большие молнии mjollnir
+arcane_blink|Магический блинк|блинк аркан арканный синий блинк arcane blink
+ overwhelming_blink|Подавляющий блинк|блинк овервелминг силовой красный блинк overwhelming blink
+swift_blink|Стремительный блинк|блинк свифт ловкий зеленый зелёный блинк swift blink
+crellas_crozier|Посох Креллы|крелла крозье crella crozier
+ hydras_breath|Дыхание гидры|гидра hydra breath
+occult_bracelet|Оккультный браслет|браслет оккульт occult bracelet
+kobold_cup|Кубок кобольда|кобольд кубок kobold cup
+ chipped_vest|Потрёпанный жилет|чиппед вест жилет chipped vest
+polliwog_charm|Талисман головастика|полливог головастик pollywog
+ dormant_curio|Спящая диковинка|курио диковинка dormant curio
+ duelist_gloves|Перчатки дуэлянта|дуэлист перчатки duelist gloves
+weighted_dice|Утяжелённые кости|кости кубики дайсы weighted dice
+ash_legion_shield|Щит Пепельного легиона|пепельный щит ash legion
+ dagger_of_ristul|Кинжал Ристула|ристул даггер dagger ristul
+stonefeather_satchel|Сумка каменных перьев|сумка сэтчел satchel
+ possessed_mask|Одержимая маска|поссессед маска possessed mask
+foragers_kit|Набор собирателя|набор собиратель forager kit
+essence_ring|Кольцо сущности|эссенс ринг essence ring
+ mana_draught|Глоток маны|мана драфт mana draught
+poor_mans_shield|Щит бедняка|пмс щит бедняка pms poor man shield
+searing_signet|Обжигающая печатка|сигнет печатка searing signet
+pogo_stick|Игрушка акробата|прыгалка тумблер pogo tumbler toy
+ defiant_shell|Непокорный панцирь|панцирь шелл defiant shell
+crippling_crossbow|Калечащий арбалет|арбалет кроссбоу crippling crossbow
+medallion_of_courage|Медальон отваги|медалька медальон medallion
+seeds_of_serenity|Семена спокойствия|семена сидс seeds
+ serrated_shiv|Зазубренный нож|нож шив serrated shiv
+ gunpowder_gauntlets|Пороховая перчатка|порох ганпаудер gunpowder
+jidi_pollen_bag|Мешочек пыльцы Джиди|пыльца джиди jidi pollen
+psychic_headband|Повязка телепата|повязка психик psychic headband
+unrelenting_eye|Неумолимое око|око глаз unrelenting eye
+ cloak_of_flames|Плащ пламени|плащ огня флейм cloak flames
+ spellslinger|Заклинатель|спеллслингер spellslinger
+ stormcrafter|Творец бурь|штормкрафтер stormcrafter
+partisans_brand|Клеймо партизана|партизан клеймо partisan brand
+ giant_maul|Молот великана|гигант молот giant maul
+rattlecage|Гремучая клетка|реттл ратл клетка rattlecage
+ idol_of_screeauk|Идол Скриок|идол скриок screeauk idol
+flayers_bota|Бурдюк свежевателя|бурдюк бота flayer bota
+metamorphic_mandible|Изменчивая челюсть|челюсть мандибла metamorphic mandible
+ dandelion_amulet|Амулет одуванчика|одуванчик амулет dandelion
+ enchanters_bauble|Безделушка чародея|энчантер безделушка enchanter bauble
+prophets_pendulum|Маятник пророка|маятник пророк prophet pendulum
+ conjurers_catalyst|Катализатор заклинателя|катализатор catalyst
+ desolator_2|Стигийский дезолятор|стигийский дезоль дезолятор дезол stygian desolator
+ fallen_sky|Падшее небо|фаллен скай небо fallen sky
+ demonicon|Книга мёртвых|книга мертвых некрономикон некра book dead necronomicon
+minotaur_horn|Рог минотавра|рог минотавр minotaur horn
+spider_legs|Паучьи лапы|паук лапы спайдер spider legs
+ riftshadow_prism|Призма теневого разлома|призма рифтшадоу riftshadow prism
+ dezun_bloodrite|Кровавый обряд Дезуна|дезун обряд dezun bloodrite
+ divine_regalia|Божественные регалии|регалии divine regalia
+harmonizer|Гармонизатор|гармонизатор арфа harmonizer
+heavy_blade|Погибель ведьм|вичбейн witchbane
+ aegis|Эгида бессмертия|аегис эгида аегис aegis
+cheese|Сыр|сыр cheese
+refresher_shard|Осколок обновления|рефрешер шард refresher shard
+ roshans_banner|Знамя Рошана|рошан баннер знамя roshan banner
+royale_with_cheese|Сырная глыба|блок сыра большой сыр block cheese
+ famango|Целебный лотос|лотос хил лотус healing lotus
+ great_famango|Большой целебный лотос|лотос большой лотус great healing lotus
+ greater_famango|Великий целебный лотос|лотос великий лотус greater healing lotus
