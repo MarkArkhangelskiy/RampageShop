@@ -355,6 +355,16 @@
       "Other Items",
       [
         [
+          "boss-rewards",
+          "Boss Rewards",
+          [
+            "aegis",
+            "cheese",
+            "refresher_shard",
+            "roshans_banner"
+          ]
+        ],
+        [
           "collectibles",
           "Collectibles",
           [
@@ -367,7 +377,7 @@
       ]
     ]
   ],
-  "count": 240,
+  "count": 244,
   "downloads": [
     {
       "key": "blood_grenade",
@@ -1563,6 +1573,26 @@
       "key": "greater_famango",
       "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/greater_famango.png",
       "file": "img/items/greater_famango.png"
+    },
+    {
+      "key": "aegis",
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/aegis.png",
+      "file": "img/items/aegis.png"
+    },
+    {
+      "key": "cheese",
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/cheese.png",
+      "file": "img/items/cheese.png"
+    },
+    {
+      "key": "refresher_shard",
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/refresher_shard.png",
+      "file": "img/items/refresher_shard.png"
+    },
+    {
+      "key": "roshans_banner",
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/roshans_banner.png",
+      "file": "img/items/roshans_banner.png"
     }
   ]
 }

@@ -38,6 +38,7 @@ const groups = [
     ['neutral-items', 'Neutral Items', Object.entries(tiers).map(([tier, data]) => ['tier-' + tier, 'Tier ' + tier, Object.keys(data.items).map(k => k.replace('item_', '')).join(' ')])],
     ['other-items', 'Other Items', [
 
+        ['boss-rewards', 'Boss Rewards', 'aegis cheese refresher_shard roshans_banner'],
         ['collectibles', 'Collectibles', 'royale_with_cheese famango great_famango greater_famango']
     ]]
 ];
@@ -116,7 +117,7 @@ ${groups.map(([id,name,cats]) => `                <optgroup label="${name}">\n  
     </header>
     <main>
         <h1>Dota 2 Items</h1>
-        <p>Neutral and collectible item prices are fictional hero-to-hero asking prices.</p>
+        <p>Neutral item and reward prices are fictional hero-to-hero asking prices.</p>
         <p id="results-count" role="status" aria-live="polite"></p>
         <p id="no-results" hidden>No items found. Try another name or reset the filters.</p>
 ${groups.map(([group,name,categories])=>`        <section class="${group} item-group">\n            <h2>${name}</h2>\n${categories.map(([category,title,keys])=>`            <section class="${category} item-category">\n                <h3>${title}</h3>\n${keys.map(k=>card(k,category,group)).join('\n')}\n            </section>`).join('\n')}\n        </section>`).join('\n')}
