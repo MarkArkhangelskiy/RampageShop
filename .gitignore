@@ -8,3 +8,8 @@ work/item_colors.json
 work/*.log
 Thumbs.db
 .DS_Store
+work/github-*.json
+work/read-*-test.cjs
+work/read-repo-file.cjs
+work/prepare-github-backup.cjs
+work/save-backup-state.cjs

@@ -1,0 +1,27 @@
+const fs=require('fs'),path=require('path');
+const jobs=JSON.parse(fs.readFileSync('work/image-jobs.json','utf8'));
+const removed=jobs.filter(j=>j.category==='boss-rewards');
+if(removed.length!==6)throw Error('Expected six Roshan rewards');
+const removedKeys=new Set(removed.map(j=>j.key));
+let html=fs.readFileSync('index.html','utf8');
+html=html.replace(/\s*<option value="boss-rewards">Boss Rewards<\/option>/,'');
+html=html.replace(/\s*<section class="boss-rewards item-category">[\s\S]*?<\/section>/,'');
+if((html.match(/ item-card"/g)||[]).length!==240)throw Error('Wrong card count');
+fs.writeFileSync('index.html',html);
+const active=jobs.filter(j=>!removedKeys.has(j.key));
+fs.writeFileSync('work/image-jobs.json',JSON.stringify(active,null,2));
+fs.writeFileSync('work/removed-roshan.json',JSON.stringify(removed.map(j=>({key:j.key,name:j.name,file:j.file})),null,2));
+const prices=JSON.parse(fs.readFileSync('work/marketplace-prices.json','utf8'));for(const key of removedKeys)delete prices[key];fs.writeFileSync('work/marketplace-prices.json',JSON.stringify(prices,null,2));
+const catalog=JSON.parse(fs.readFileSync('work/catalog.json','utf8'));for(const group of catalog.groups)group[2]=group[2].filter(c=>c[0]!=='boss-rewards');catalog.count=240;catalog.downloads=catalog.downloads.filter(j=>!removedKeys.has(j.key));fs.writeFileSync('work/catalog.json',JSON.stringify(catalog,null,2));
+for(const j of removed){for(const file of [j.file,'img/items/'+j.key+'.png']){const target=path.resolve(file),root=path.resolve('.');if(!target.startsWith(root+path.sep))throw Error('Outside project');if(fs.existsSync(target))fs.unlinkSync(target);}}
+let generator=fs.readFileSync('work/build-catalog.cjs','utf8');generator=generator.replace(/^\s*\['boss-rewards', 'Boss Rewards', '[^']*'\],\r?\n/m,'\n');fs.writeFileSync('work/build-catalog.cjs',generator);
+let readme=fs.readFileSync('README.md','utf8').replace('В каталоге 246 карточек: 73 базовых предмета, 114 улучшенных, 49 нейтральных предметов по уровням и 10 наград/собираемых предметов.', 'В каталоге 240 карточек: 73 базовых предмета, 114 улучшенных, 49 нейтральных предметов по уровням и 4 собираемых предмета. Все шесть наград Roshan удалены, магазинные варианты Aghanim’s Blessing и Shard сохранены.');
+readme=readme.replace('Для всех 246 карточек','Для всех 240 карточек').replace('Все 59 нейтральных предметов и наград','Все 53 нейтральных и собираемых предмета').replace(/Особые награды оценены отдельно:[^\n]*Список значений/, 'Собираемые предметы: Block of Cheese — 6500, Healing Lotus — 150, Great Healing Lotus — 400, Greater Healing Lotus — 900. Список значений');
+readme=readme.replace('246 отдельных изображений, 246 подключений в HTML.', '246 отдельных изображений; после удаления шести наград Roshan в актуальном каталоге осталось 240 подключений.');
+readme+='\n## Резервные копии и Google Drive\n\nПриватный репозиторий: https://github.com/Hekk1maru/RampageShop. Во время загрузки создавались промежуточные коммиты. В истории сохранён полный каталог до удаления наград Roshan.\n\nGoogle Drive ещё не подключён к этому сеансу. Папка RampageShop на Диске и внешние ссылки пока не созданы. Чтобы проект работал на другом компьютере, все изображения временно сохранены в репозитории и подключены локальными путями. Для завершения переноса подключи Google Drive и попроси продолжить загрузку в папку RampageShop.\n';
+fs.writeFileSync('README.md',readme);
+let sources=fs.readFileSync('SOURCES.md','utf8');sources+='\n5 ноября 2026 года по запросу автора удалены все шесть наград Roshan: Aegis, Cheese, Refresher Shard, Roshan’s Banner и варианты Aghanim’s Blessing/Shard от Roshan. Их магазинные варианты сохранены. Актуальный каталог: 240 предметов и 240 сгенерированных иллюстраций. Предыдущие 246 изображений сохранены в истории приватного GitHub-репозитория. Перенос на Google Drive ожидает подключения сервиса; текущий HTML использует локальные изображения из репозитория.\n';fs.writeFileSync('SOURCES.md',sources);
+let check=fs.readFileSync('work/verify-marketplace.cjs','utf8').replaceAll('246','240').replaceAll('59','53');
+check=check.replace("assert.equal(jobs.length,240);", "assert.equal(jobs.length,240);assert(jobs.every(j=>j.category!=='boss-rewards'));assert(!html.includes('data-category=\"boss-rewards\"'));assert.equal(new Set(jobs.map(j=>j.name)).size,240);");fs.writeFileSync('work/verify-marketplace.cjs',check);
+let unique=fs.readFileSync('work/check-unique-images.cjs','utf8').replaceAll('246','240');fs.writeFileSync('work/check-unique-images.cjs',unique);
+console.log('Removed:',removed.map(j=>j.name));console.log('Active:',active.length,'Custom prices:',Object.keys(prices).length);

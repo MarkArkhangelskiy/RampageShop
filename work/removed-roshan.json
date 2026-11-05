@@ -1,0 +1,32 @@
+[
+  {
+    "key": "aegis",
+    "name": "Aegis of the Immortal",
+    "file": "img/marketplace/aegis.png"
+  },
+  {
+    "key": "cheese",
+    "name": "Cheese",
+    "file": "img/marketplace/cheese.png"
+  },
+  {
+    "key": "refresher_shard",
+    "name": "Refresher Shard",
+    "file": "img/marketplace/refresher_shard.png"
+  },
+  {
+    "key": "ultimate_scepter_roshan",
+    "name": "Aghanim's Blessing - Roshan",
+    "file": "img/marketplace/ultimate_scepter_roshan.png"
+  },
+  {
+    "key": "aghanims_shard_roshan",
+    "name": "Aghanim's Shard - Consumable",
+    "file": "img/marketplace/aghanims_shard_roshan.png"
+  },
+  {
+    "key": "roshans_banner",
+    "name": "Roshan's Banner",
+    "file": "img/marketplace/roshans_banner.png"
+  }
+]

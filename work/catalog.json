@@ -355,18 +355,6 @@
       "Other Items",
       [
         [
-          "boss-rewards",
-          "Boss Rewards",
-          [
-            "aegis",
-            "cheese",
-            "refresher_shard",
-            "ultimate_scepter_roshan",
-            "aghanims_shard_roshan",
-            "roshans_banner"
-          ]
-        ],
-        [
           "collectibles",
           "Collectibles",
           [
@@ -379,7 +367,7 @@
       ]
     ]
   ],
-  "count": 246,
+  "count": 240,
   "downloads": [
     {
       "key": "blood_grenade",
@@ -1555,36 +1543,6 @@
       "key": "heavy_blade",
       "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/heavy_blade.png",
       "file": "img/items/heavy_blade.png"
-    },
-    {
-      "key": "aegis",
-      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/aegis.png",
-      "file": "img/items/aegis.png"
-    },
-    {
-      "key": "cheese",
-      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/cheese.png",
-      "file": "img/items/cheese.png"
-    },
-    {
-      "key": "refresher_shard",
-      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/refresher_shard.png",
-      "file": "img/items/refresher_shard.png"
-    },
-    {
-      "key": "ultimate_scepter_roshan",
-      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_scepter_roshan.png",
-      "file": "img/items/ultimate_scepter_roshan.png"
-    },
-    {
-      "key": "aghanims_shard_roshan",
-      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/aghanims_shard_roshan.png",
-      "file": "img/items/aghanims_shard_roshan.png"
-    },
-    {
-      "key": "roshans_banner",
-      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/roshans_banner.png",
-      "file": "img/items/roshans_banner.png"
     },
     {
       "key": "royale_with_cheese",

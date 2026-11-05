@@ -1,0 +1,1 @@
+const fs=require('fs');for(const file of ['index.html','work/build-catalog.cjs']){let s=fs.readFileSync(file,'utf8').replaceAll('Neutral item and reward prices are fictional hero-to-hero asking prices.','Neutral and collectible item prices are fictional hero-to-hero asking prices.');fs.writeFileSync(file,s);}
